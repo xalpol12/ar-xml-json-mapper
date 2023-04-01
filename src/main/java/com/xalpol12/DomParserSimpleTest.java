@@ -21,7 +21,6 @@ public class DomParserSimpleTest {
 
     void parse(String fileName) {
         try {
-//            InputStream stream = FileHandler.getFileInputStream(fileName);
             File file = FileHandler.getFile(fileName);
             Document doc = dBuilder.parse(file);
             System.out.println("Root element : " + doc.getDocumentElement().getNodeName());
