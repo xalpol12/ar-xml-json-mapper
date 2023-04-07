@@ -1,0 +1,4 @@
+<TARGET marker="ARCube_Joining" extended="true">
+    <NODE tz="0.03" rx="90" sxyz="0.001">
+    </NODE>
+</TARGET>

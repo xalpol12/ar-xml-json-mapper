@@ -1,0 +1,4 @@
+  <CAMERA x="0" y="0" scaleto="w" distance="0.1">
+      <NODE sxyz="0.001">
+      </NODE>
+  </CAMERA>

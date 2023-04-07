@@ -1,6 +1,8 @@
 package com.xalpol12.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -8,6 +10,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @XmlRootElement(name = "MODEL")
 @XmlType(propOrder = {"file", "texture", "tint", "link"})
 public class Model {
@@ -15,6 +19,7 @@ public class Model {
     private String file;
     private String texture;
     private String tint;
+
 
     @XmlElement(name = "LINK")
     public void setLink(Link link) {

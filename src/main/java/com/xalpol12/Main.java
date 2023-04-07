@@ -1,6 +1,7 @@
 package com.xalpol12;
 
 
+import com.xalpol12.entity.Animation;
 import com.xalpol12.entity.Link;
 import com.xalpol12.entity.Model;
 import com.xalpol12.entity.ValueServer;
@@ -11,10 +12,10 @@ public class Main {
 
     private static final String RESOURCES_PATH = "src/main/resources";
     private static final String FILENAME = RESOURCES_PATH + "/documents/xml/Joining_01.xml";
-    private static final String TEST_FILENAME = RESOURCES_PATH + "/documents/xml/testfiles/test_model.xml";
+    private static final String TEST_FILENAME = RESOURCES_PATH + "/documents/xml/testfiles/test_animation.xml";
 
     public static void main(String[] args) throws JAXBException {
-        Model model = JAXBParser.unmarshall(TEST_FILENAME, Model.class);
-        System.out.println(model.toString());
+        Animation animation = JAXBParser.unmarshall(TEST_FILENAME, Animation.class);
+        System.out.println(animation.toString());
     }
 }

@@ -1,0 +1,5 @@
+<ANIMATION attribute="sxyz">
+    <KEYFRAME time="0" value="1" lerp="linear"/>
+    <KEYFRAME time="1" value="1.5" lerp="linear"/>
+    <KEYFRAME time="2" value="1" lerp="linear"/>
+</ANIMATION>

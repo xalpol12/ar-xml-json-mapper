@@ -5,21 +5,14 @@ import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;
 
+import java.security.Key;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
+import static com.xalpol12.StringManager.*;
 
 class JAXBParserTest {
-
-    private static final String TEST_FILES_PATH = "src/main/resources/documents/xml/testfiles";
-    private static final String TEST_WEBSOCKET = TEST_FILES_PATH + "/test_websocket.xml";
-    private static final String TEST_VALUESERVER = TEST_FILES_PATH + "/test_valueserver.xml";
-    private static final String TEST_VALUESERVER_EMPTYELEMENT = TEST_FILES_PATH + "/test_valueserver_emptyelement.xml";
-    private static final String TEST_LINK = TEST_FILES_PATH + "/test_link.xml";
-    private static final String TEST_LINK_EMPTYRGB = TEST_FILES_PATH + "/test_link_emptyrgb.xml";
-    private static final String TEST_MODEL = TEST_FILES_PATH + "/test_model.xml";
-    private static final String TEST_MODEL_EMPTYELEMENT = TEST_FILES_PATH + "/test_model_emptyelement.xml";
-    private static final String TEST_TEXT = TEST_FILES_PATH + "/test_text.xml";
-    private static final String TEST_TRANSMIT = TEST_FILES_PATH + "/test_transmit.xml";
-    private static final String TEST_SWITCH = TEST_FILES_PATH + "/test_switch.xml";
 
     private WebSocket createWebSocket() {
         WebSocket webSocket = new WebSocket();
@@ -85,6 +78,53 @@ class JAXBParserTest {
         return aSwitch;
     }
 
+    private Animation createAnimation() {
+        KeyFrame frame1 = new KeyFrame(0, 1, "linear");
+        KeyFrame frame2 = new KeyFrame(1, 1.5, "linear");
+        KeyFrame frame3 = new KeyFrame(2, 1, "linear");
+        List<KeyFrame> frames = List.of(frame1, frame2, frame3);
+
+        Animation animation = new Animation();
+        animation.setKeyFrameList(frames);
+        animation.setAttribute("sxyz");
+        return animation;
+    }
+
+    private Node createNode() {
+        Node node = new Node();
+        node.setTz(0.03);
+        node.setRx(90);
+        node.setSxyz(0.001);
+        return node;
+    }
+
+    private Target createTarget() {
+        Target target = new Target();
+        target.setMarker("ARCube_Joining");
+        target.setExtended(true);
+        return target;
+    }
+
+    private TargetBase createTargetBase() {
+        TargetBase targetBase = new TargetBase();
+        targetBase.setFile("ARCubeMPS403");
+        targetBase.setTarget(createTarget());
+        return targetBase;
+    }
+
+    private Camera createCamera() {
+        Camera camera = new Camera();
+        camera.setX(0);
+        camera.setY(0);
+        camera.setScaleto("w");
+        camera.setDistance(0.1);
+
+        Node node = new Node();
+        node.setSxyz(0.001);
+
+        camera.setNode(node);
+        return camera;
+    }
 
     @Test
     void unmarshallWebSocketXMLFile_compareWithCreatedWebSocketPOJO() throws JAXBException {
@@ -220,4 +260,69 @@ class JAXBParserTest {
         assertEquals(aSwitch, parsedSwitch);
     }
 
+    @Test
+    void unmarshallKeyFrameXMLFILE_compareWithCreatedKeyFramePOJO() throws JAXBException {
+        //given
+        KeyFrame keyFrame = new KeyFrame(1, 1.5, "linear");
+
+        //when
+        KeyFrame parsedKeyFrame = JAXBParser.unmarshall(TEST_KEYFRAME, KeyFrame.class);
+
+        //then
+        System.out.println(parsedKeyFrame.toString());
+        assertEquals(keyFrame, parsedKeyFrame);
+    }
+
+    @Test
+    void unmarshallAnimationXMLFILE_compareWithCreatedAnimationPOJO() throws JAXBException {
+        //given
+        Animation animation = createAnimation();
+
+        //when
+        Animation parsedAnimation = JAXBParser.unmarshall(TEST_ANIMATION, Animation.class);
+
+        //then
+        System.out.println(parsedAnimation.toString());
+        assertEquals(animation, parsedAnimation);
+    }
+
+    @Test
+    void unmarshallTargetXMLFILE_compareWithCreatedTargetPOJO() throws JAXBException {
+        //given
+        Target target = createTarget();
+        target.setNode(createNode());
+
+        //when
+        Target parsedTarget = JAXBParser.unmarshall(TEST_TARGET, Target.class);
+
+        //then
+        System.out.println(parsedTarget.toString());
+        assertEquals(target, parsedTarget);
+    }
+
+    @Test
+    void unmarshallTargetBaseXMLFILE_compareWithCreatedTargetBasePOJO() throws JAXBException {
+        //given
+        TargetBase targetBase = createTargetBase();
+
+        //when
+        TargetBase parsedTargetBase = JAXBParser.unmarshall(TEST_TARGETBASE, TargetBase.class);
+
+        //then
+        System.out.println(parsedTargetBase.toString());
+        assertEquals(targetBase, parsedTargetBase);
+    }
+
+    @Test
+    void unmarshallCameraXMLFILE_compareWithCreatedCameraPOJO() throws JAXBException {
+        //given
+        Camera camera = createCamera();
+
+        //when
+        Camera parsedCamera = JAXBParser.unmarshall(TEST_CAMERA, Camera.class);
+
+        //then
+        System.out.println(parsedCamera.toString());
+        assertEquals(camera, parsedCamera);
+    }
 }
