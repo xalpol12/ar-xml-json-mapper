@@ -9,11 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 @Data
 @XmlRootElement(name = "WEBSOCKET")
 @XmlType(propOrder = {"url", "prefix", "transmitter"})
-public class Websocket {
+public class WebSocket {
     private String url;
-
     private String prefix;
-
     private String transmitter;
 
     @XmlAttribute
