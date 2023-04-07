@@ -1,0 +1,1 @@
+<WEBSOCKET url="ws://mes-pc.festo.systems:18802/ar/error-codes" prefix="errors_2" transmitter="constructed"/>

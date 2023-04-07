@@ -1,0 +1,3 @@
+<VALUESERVER predefined="{&quot;joining_db_HMI_Con_xHMIkey&quot;:true,&quot;joining_db_HMI_Con_xHMIstartLED&quot;:true,&quot;joining_db_HMI_Con_xHMIstartLED_Not&quot;:true,&quot;joining_db_HMI_Con_xHMIresetLED_Not&quot;:true,&quot;joining_indLightYe_Not&quot;:true,&quot;joining_connected_belt_Not&quot;:true}">
+    <WEBSOCKET url="ws://mes-pc.festo.systems:18802/ar/error-codes" prefix="errors_2" transmitter="constructed"/>
+</VALUESERVER>
