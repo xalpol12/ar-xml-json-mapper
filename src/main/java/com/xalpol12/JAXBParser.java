@@ -1,6 +1,7 @@
 package com.xalpol12;
 
 import com.xalpol12.entity.Link;
+import com.xalpol12.entity.Model;
 import com.xalpol12.entity.ValueServer;
 import com.xalpol12.entity.WebSocket;
 
@@ -26,5 +27,11 @@ public class JAXBParser {
         File file = FileHandler.getFile(fileName);
         JAXBContext context = JAXBContext.newInstance(Link.class);
         return (Link) context.createUnmarshaller().unmarshal(file);
+    }
+
+    static public Model unmarshallModel(String fileName) throws JAXBException {
+        File file = FileHandler.getFile(fileName);
+        JAXBContext context = JAXBContext.newInstance(Model.class);
+        return (Model) context.createUnmarshaller().unmarshal(file);
     }
 }

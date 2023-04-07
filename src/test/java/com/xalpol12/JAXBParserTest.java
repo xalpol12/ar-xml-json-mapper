@@ -1,6 +1,7 @@
 package com.xalpol12;
 
 import com.xalpol12.entity.Link;
+import com.xalpol12.entity.Model;
 import com.xalpol12.entity.ValueServer;
 import com.xalpol12.entity.WebSocket;
 import org.junit.jupiter.api.Test;
@@ -15,8 +16,10 @@ class JAXBParserTest {
     private static final String TEST_WEBSOCKET = TEST_FILES_PATH + "/test_websocket.xml";
     private static final String TEST_VALUESERVER = TEST_FILES_PATH + "/test_valueserver.xml";
     private static final String TEST_VALUESERVER_EMPTYELEMENT = TEST_FILES_PATH + "/test_valueserver_emptyelement.xml";
-    private static final String TEST_LINK = TEST_FILES_PATH + "/test_link_withrgbvalue.xml";
-    private static final String TEST_LINK_EMPTYRGB = TEST_FILES_PATH + "/test_link.xml";
+    private static final String TEST_LINK = TEST_FILES_PATH + "/test_link.xml";
+    private static final String TEST_LINK_EMPTYRGB = TEST_FILES_PATH + "/test_link_emptyrgb.xml";
+    private static final String TEST_MODEL = TEST_FILES_PATH + "/test_model.xml";
+    private static final String TEST_MODEL_EMPTYELEMENT = TEST_FILES_PATH + "/test_model_emptyelement.xml";
 
     private WebSocket createWebSocket() {
         WebSocket webSocket = new WebSocket();
@@ -44,6 +47,14 @@ class JAXBParserTest {
         link.setD(30);
         return link;
     }
+
+    private Model createModel() {
+        Model model = new Model();
+        model.setFile("planexy");
+        model.setTexture("images/docu_rounded_colored.png");
+        return model;
+    }
+
 
     @Test
     void unmarshallWebSocketXMLFile_compareWithCreatedWebSocketPOJO() throws JAXBException {
@@ -107,5 +118,30 @@ class JAXBParserTest {
         assertEquals(link, parsedLink);
     }
 
+    @Test
+    void unmarshallModelXMLFILE_compareWithCreatedModelPOJO_tintNotPresent() throws JAXBException {
+        //given
+        Model model = createModel();
+        model.setLink(createLink());
+
+        //when
+        Model parsedModel = JAXBParser.unmarshallModel(TEST_MODEL);
+
+        //then
+        assertEquals(model, parsedModel);
+    }
+
+    @Test
+    void unmarshallModelXMLFILE_compareWithCreatedModelPOJO_linkNotPresent() throws JAXBException {
+        //given
+        Model model = createModel();
+        model.setTint("#B6BEC6");
+
+        //when
+        Model parsedModel = JAXBParser.unmarshallModel(TEST_MODEL_EMPTYELEMENT);
+
+        //then
+        assertEquals(model, parsedModel);
+    }
 
 }
