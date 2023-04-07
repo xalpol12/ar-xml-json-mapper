@@ -14,7 +14,7 @@ public class Main {
     private static final String TEST_FILENAME = RESOURCES_PATH + "/documents/xml/testfiles/test_model.xml";
 
     public static void main(String[] args) throws JAXBException {
-        Model model = JAXBParser.unmarshallModel(TEST_FILENAME);
+        Model model = JAXBParser.unmarshall(TEST_FILENAME, Model.class);
         System.out.println(model.toString());
     }
 }

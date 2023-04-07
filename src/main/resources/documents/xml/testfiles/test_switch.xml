@@ -1,0 +1,3 @@
+<SWITCH w="25" h="25" d="0" on="true" onvalue="true" offvalue="false">
+    <TRANSMIT attribute="pressed" variable="joining_Reset" transmitter="send_joining" threshold=""/>
+</SWITCH>

@@ -1,37 +1,16 @@
 package com.xalpol12;
 
-import com.xalpol12.entity.Link;
-import com.xalpol12.entity.Model;
-import com.xalpol12.entity.ValueServer;
-import com.xalpol12.entity.WebSocket;
+import com.xalpol12.entity.*;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import java.io.File;
+import java.io.Serializable;
 
 public class JAXBParser {
-
-    static public WebSocket unmarshallWebsocket(String fileName) throws JAXBException {
+    static public <T> T unmarshall(String fileName, Class<T> type) throws JAXBException {
         File file = FileHandler.getFile(fileName);
-        JAXBContext context = JAXBContext.newInstance(WebSocket.class);
-        return (WebSocket) context.createUnmarshaller().unmarshal(file);
-    }
-
-    static public ValueServer unmarshallValueServer(String fileName) throws JAXBException {
-        File file = FileHandler.getFile(fileName);
-        JAXBContext context = JAXBContext.newInstance(ValueServer.class);
-        return (ValueServer) context.createUnmarshaller().unmarshal(file);
-    }
-
-    static public Link unmarshallLink(String fileName) throws JAXBException {
-        File file = FileHandler.getFile(fileName);
-        JAXBContext context = JAXBContext.newInstance(Link.class);
-        return (Link) context.createUnmarshaller().unmarshal(file);
-    }
-
-    static public Model unmarshallModel(String fileName) throws JAXBException {
-        File file = FileHandler.getFile(fileName);
-        JAXBContext context = JAXBContext.newInstance(Model.class);
-        return (Model) context.createUnmarshaller().unmarshal(file);
+        JAXBContext context = JAXBContext.newInstance(type);
+        return (T) context.createUnmarshaller().unmarshal(file);
     }
 }

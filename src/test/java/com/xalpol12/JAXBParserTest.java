@@ -1,9 +1,6 @@
 package com.xalpol12;
 
-import com.xalpol12.entity.Link;
-import com.xalpol12.entity.Model;
-import com.xalpol12.entity.ValueServer;
-import com.xalpol12.entity.WebSocket;
+import com.xalpol12.entity.*;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;
@@ -20,6 +17,9 @@ class JAXBParserTest {
     private static final String TEST_LINK_EMPTYRGB = TEST_FILES_PATH + "/test_link_emptyrgb.xml";
     private static final String TEST_MODEL = TEST_FILES_PATH + "/test_model.xml";
     private static final String TEST_MODEL_EMPTYELEMENT = TEST_FILES_PATH + "/test_model_emptyelement.xml";
+    private static final String TEST_TEXT = TEST_FILES_PATH + "/test_text.xml";
+    private static final String TEST_TRANSMIT = TEST_FILES_PATH + "/test_transmit.xml";
+    private static final String TEST_SWITCH = TEST_FILES_PATH + "/test_switch.xml";
 
     private WebSocket createWebSocket() {
         WebSocket webSocket = new WebSocket();
@@ -55,6 +55,36 @@ class JAXBParserTest {
         return model;
     }
 
+    private Text createText() {
+        Text text = new Text();
+        text.setRgba("#FFFFFFFF");
+        text.setLabel("Switch key to MANUAL mode, then press reset");
+        text.setWidth(140);
+        text.setBackrgba("#000000FF");
+        return text;
+    }
+
+    private Transmit createTransmit() {
+        Transmit transmit = new Transmit();
+        transmit.setAttribute("pressed");
+        transmit.setVariable("joining_Reset");
+        transmit.setTransmitter("send_joining");
+        transmit.setThreshold("");
+        return transmit;
+    }
+
+    private Switch createSwitch() {
+        Switch aSwitch = new Switch();
+        aSwitch.setW(25);
+        aSwitch.setH(25);
+        aSwitch.setD(0);
+        aSwitch.setOn(true);
+        aSwitch.setOnvalue(true);
+        aSwitch.setOffvalue(false);
+        aSwitch.setTransmit(createTransmit());
+        return aSwitch;
+    }
+
 
     @Test
     void unmarshallWebSocketXMLFile_compareWithCreatedWebSocketPOJO() throws JAXBException {
@@ -62,9 +92,10 @@ class JAXBParserTest {
         WebSocket webSocket = createWebSocket();
 
         //when
-        WebSocket parsedWebSocket = JAXBParser.unmarshallWebsocket(TEST_WEBSOCKET);
+        WebSocket parsedWebSocket = JAXBParser.unmarshall(TEST_WEBSOCKET, WebSocket.class);
 
         //then
+        System.out.println(parsedWebSocket.toString());
         assertEquals(webSocket, parsedWebSocket);
     }
 
@@ -75,9 +106,10 @@ class JAXBParserTest {
         valueServer.setWebsocket(createWebSocket());
 
         //when
-        ValueServer parsedValueServer = JAXBParser.unmarshallValueServer(TEST_VALUESERVER);
+        ValueServer parsedValueServer = JAXBParser.unmarshall(TEST_VALUESERVER, ValueServer.class);
 
         //then
+        System.out.println(parsedValueServer.toString());
         assertEquals(valueServer, parsedValueServer);
     }
 
@@ -87,9 +119,10 @@ class JAXBParserTest {
         ValueServer valueServer = createValueServer();
 
         //when
-        ValueServer parsedValueServer = JAXBParser.unmarshallValueServer(TEST_VALUESERVER_EMPTYELEMENT);
+        ValueServer parsedValueServer = JAXBParser.unmarshall(TEST_VALUESERVER_EMPTYELEMENT, ValueServer.class);
 
         //then
+        System.out.println(parsedValueServer.toString());
         assertEquals(valueServer, parsedValueServer);
     }
 
@@ -100,9 +133,10 @@ class JAXBParserTest {
         link.setRgb("FFFFFF");
 
         //when
-        Link parsedLink = JAXBParser.unmarshallLink(TEST_LINK);
+        Link parsedLink = JAXBParser.unmarshall(TEST_LINK, Link.class);
 
         //then
+        System.out.println(parsedLink.toString());
         assertEquals(link, parsedLink);
     }
 
@@ -112,9 +146,10 @@ class JAXBParserTest {
         Link link = createLink();
 
         //when
-        Link parsedLink = JAXBParser.unmarshallLink(TEST_LINK_EMPTYRGB);
+        Link parsedLink = JAXBParser.unmarshall(TEST_LINK_EMPTYRGB, Link.class);
 
         //then
+        System.out.println(parsedLink.toString());
         assertEquals(link, parsedLink);
     }
 
@@ -125,9 +160,10 @@ class JAXBParserTest {
         model.setLink(createLink());
 
         //when
-        Model parsedModel = JAXBParser.unmarshallModel(TEST_MODEL);
+        Model parsedModel = JAXBParser.unmarshall(TEST_MODEL, Model.class);
 
         //then
+        System.out.println(parsedModel.toString());
         assertEquals(model, parsedModel);
     }
 
@@ -138,10 +174,50 @@ class JAXBParserTest {
         model.setTint("#B6BEC6");
 
         //when
-        Model parsedModel = JAXBParser.unmarshallModel(TEST_MODEL_EMPTYELEMENT);
+        Model parsedModel = JAXBParser.unmarshall(TEST_MODEL_EMPTYELEMENT, Model.class);
 
         //then
+        System.out.println(parsedModel.toString());
         assertEquals(model, parsedModel);
+    }
+
+    @Test
+    void unmarshallTextXMLFILE_compareWithCreatedTextPOJO() throws JAXBException {
+        //given
+        Text text = createText();
+
+        //when
+        Text parsedText = JAXBParser.unmarshall(TEST_TEXT, Text.class);
+
+        //then
+        System.out.println(parsedText.toString());
+        assertEquals(text, parsedText);
+    }
+
+    @Test
+    void unmarshallTransmitXMLFILE_compareWithCreatedTransmitPOJO() throws JAXBException {
+        //given
+        Transmit transmit = createTransmit();
+
+        //when
+        Transmit parsedTransmit = JAXBParser.unmarshall(TEST_TRANSMIT, Transmit.class);
+
+        //then
+        System.out.println(parsedTransmit.toString());
+        assertEquals(transmit, parsedTransmit);
+    }
+
+    @Test
+    void unmarshallSwitchXMLFILE_compareWithCreatedSwitchPOJO() throws JAXBException {
+        //given
+        Switch aSwitch = createSwitch();
+
+        //when
+        Switch parsedSwitch = JAXBParser.unmarshall(TEST_SWITCH, Switch.class);
+
+        //then
+        System.out.println(parsedSwitch.toString());
+        assertEquals(aSwitch, parsedSwitch);
     }
 
 }
