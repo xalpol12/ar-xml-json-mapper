@@ -14,12 +14,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "KEYFRAME")
 @XmlType(propOrder = {"time", "value", "lerp"})
 public class KeyFrame {
-    private int time;
+    private double time;
     private double value;
     private String lerp;
 
     @XmlAttribute
-    public void setTime(int time) {
+    public void setTime(double time) {
         this.time = time;
     }
 

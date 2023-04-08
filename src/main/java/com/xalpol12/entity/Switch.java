@@ -13,9 +13,9 @@ import java.io.Serializable;
 @XmlType(propOrder = {"w", "h", "d", "on", "onvalue", "offvalue", "transmit"})
 public class Switch {
     private Transmit transmit;
-    private int w;
-    private int h;
-    private int d;
+    private double w;
+    private double h;
+    private double d;
     private boolean on;
     private boolean onvalue;
     private boolean offvalue;
@@ -26,17 +26,17 @@ public class Switch {
     }
 
     @XmlAttribute
-    public void setW(int w) {
+    public void setW(double w) {
         this.w = w;
     }
 
     @XmlAttribute
-    public void setH(int h) {
+    public void setH(double h) {
         this.h = h;
     }
 
     @XmlAttribute
-    public void setD(int d) {
+    public void setD(double d) {
         this.d = d;
     }
 

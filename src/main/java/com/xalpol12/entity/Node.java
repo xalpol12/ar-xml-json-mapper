@@ -12,8 +12,8 @@ import java.util.List;
 @Data
 @XmlRootElement(name = "NODE")
 @XmlType(propOrder = {"tx", "ty", "tz", "rx", "ry", "sx", "sy", "sz",
-        "sxyz", "view", "collapse", "show", "nodeList", "text", "model",
-        "aSwitch", "animation", "link"})
+        "sxyz", "view", "collapse", "show", "text", "model",
+        "aSwitch", "nodeList", "animation", "link"})
 public class Node {
     private List<Node> nodeList;
     private String view;
@@ -23,11 +23,11 @@ public class Node {
     private double ty;
     private double tz;
     private double sxyz;
-    private int sx;
-    private int sy;
-    private int sz;
-    private int rx;
-    private int ry;
+    private double sx;
+    private double sy;
+    private double sz;
+    private double rx;
+    private double ry;
     private Text text;
     private Model model;
     private Switch aSwitch;
@@ -59,7 +59,7 @@ public class Node {
         this.tx = tx;
     }
 
-    //TODO: Figure out how to null not used values
+    // TODO: Figure out how to null not used values
     @XmlAttribute(required = true)
     public void setTy(double ty) {
         this.ty = ty;
@@ -76,27 +76,27 @@ public class Node {
     }
 
     @XmlAttribute(required = true)
-    public void setSx(int sx) {
+    public void setSx(double sx) {
         this.sx = sx;
     }
 
     @XmlAttribute(required = true)
-    public void setSy(int sy) {
+    public void setSy(double sy) {
         this.sy = sy;
     }
 
     @XmlAttribute(required = true)
-    public void setSz(int sz) {
+    public void setSz(double sz) {
         this.sz = sz;
     }
 
     @XmlAttribute(required = true)
-    public void setRx(int rx) {
+    public void setRx(double rx) {
         this.rx = rx;
     }
 
     @XmlAttribute(required = true)
-    public void setRy(int ry) {
+    public void setRy(double ry) {
         this.ry = ry;
     }
 

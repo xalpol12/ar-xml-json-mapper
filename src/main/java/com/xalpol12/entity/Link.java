@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(propOrder = {"refer", "w", "h", "d", "rgb"})
 public class Link {
     private String refer;
-    private int w;
-    private int h;
-    private int d;
+    private double w;
+    private double h;
+    private double d;
     private String rgb;
 
     @XmlAttribute
@@ -22,17 +22,17 @@ public class Link {
     }
 
     @XmlAttribute
-    public void setW(int w) {
+    public void setW(double w) {
         this.w = w;
     }
 
     @XmlAttribute
-    public void setH(int h) {
+    public void setH(double h) {
         this.h = h;
     }
 
     @XmlAttribute
-    public void setD(int d) {
+    public void setD(double d) {
         this.d = d;
     }
 

@@ -1,6 +1,7 @@
 package com.xalpol12;
 
 public final class StringManager {
+
     private StringManager() {} //prevents instantiation
 
     public static final String ROOT = "src/main/resources/documents/xml/testfiles";
@@ -19,4 +20,5 @@ public final class StringManager {
     public static final String TEST_TARGET = ROOT + "/test_target.xml";
     public static final String TEST_TARGETBASE = ROOT + "/test_targetbase.xml";
     public static final String TEST_CAMERA = ROOT + "/test_camera.xml";
+    public static final String TEST_NODE = ROOT + "/test_node.xml";
 }

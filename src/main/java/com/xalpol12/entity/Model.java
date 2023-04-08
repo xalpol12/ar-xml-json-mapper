@@ -36,7 +36,8 @@ public class Model {
         this.texture = texture;
     }
 
-    @XmlAttribute(required = true)
+//    @XmlAttribute(required = true)
+    @XmlAttribute
     public void setTint(String tint) {
         this.tint = tint;
     }
