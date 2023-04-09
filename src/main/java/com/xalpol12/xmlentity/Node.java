@@ -19,9 +19,9 @@ public class Node {
     private String view;
     private String collapse;
     private String show;
-    private Float tx;  // reason that all these attributes are String (could be float) is that annotating it using
-    private Float ty;  // @XmlAttribute(required = true) as float still generates the attribute as 0.0 value in final xml file,
-    private Float tz;  // so in order to omit this kind of behaviour i've decided to change their type to String, which resolves the problem
+    private Float tx;
+    private Float ty;
+    private Float tz;
     private Float sxyz;
     private Float sx;
     private Float sy;
