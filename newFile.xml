@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><AUGMENTATION viewDisplay="false" viewSwitch="false" version="550">
+<?xml version="1.0" encoding="UTF-8"?>
+<AUGMENTATION viewDisplay="false" viewSwitch="false" version="550">
   <VALUESERVER predefined="{&quot;measuring_db_HMI_Con_xHMIkey&quot;:true,&quot;measuring_db_HMI_Con_xHMIstartLED&quot;:true,&quot;measuring_db_HMI_Con_xHMIstartLED_Not&quot;:true,&quot;measuring_db_HMI_Con_xHMIresetLED_Not&quot;:true,&quot;measuring_indLightYe_Not&quot;:true,&quot;measuring_connected_belt_Not&quot;:true,&quot;measuring_db_FB_Mod_Weight_rWeight&quot;:&quot;no value available&quot;,&quot;measuring_db_Mod_Taktil_rHoehe&quot;:&quot;no value available&quot;}">
     <WEBSOCKET url="ws://mes-pc.festo.systems:18801/ar/error-codes" prefix="errors_" transmitter=""/>
   </VALUESERVER>

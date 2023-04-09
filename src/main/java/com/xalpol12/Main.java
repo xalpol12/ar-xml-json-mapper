@@ -1,6 +1,7 @@
 package com.xalpol12;
 
 
+import com.xalpol12.ioentity.components.ARNode;
 import com.xalpol12.xmlentity.*;
 
 import javax.xml.bind.JAXBException;
@@ -18,6 +19,8 @@ public class Main {
 //        JAXBParser.marshall(augmentation, "newFile.xml");
 
         Node node = new Node();
-        node.setTx(106.2f);
+        node.setTx(-257.8f);
+        node.setTy(-48f);
+        node.setTz(189.6f);
     }
 }

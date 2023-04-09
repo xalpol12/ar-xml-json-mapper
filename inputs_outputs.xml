@@ -1,0 +1,1046 @@
+<!-- Inputs [ar-node] -->
+<NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+<!-- G1BG1 [ar-node] -->
+<NODE tx="-257.8" ty="-48" tz="189.6" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_g1bg1Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G1BG1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="-39.1" ty="24.5" tz="2.7" rx="-45" view="joining_g1bg1Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g1bg1Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G1BG1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g1bg1Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g1bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor196959/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g1bg1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE sx="30" sy="30" sz="30" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE sx="30" sy="30" sz="30" view="joining_g1bg1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G1BG2 [ar-node] -->
+<NODE tx="-236" ty="-48" tz="104" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_g1bg2Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg3Details_i,joining_g1bg1Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G1BG2" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="-37.1" ty="24.5" tz="-1.5" rx="-45" view="joining_g1bg2Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g1bg2Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G1BG2" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g1bg2Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g1bg2Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor196959/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g1bg2Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE sx="30" sy="30" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE sx="30" sy="30" sz="30" view="joining_g1bg2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G1BG3 (barrier) [ar-node] -->
+<NODE tx="35.5" ty="-48" tz="108" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-link [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_g1bg3Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G1BG3" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="30" ty="24.5" tz="2.7" rx="-45" view="joining_g1bg3Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g1bg3Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G1BG3" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g1bg3Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g1bg3Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor196960/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g1bg3Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE sx="30" sy="30" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE sx="30" sy="30" sz="30" view="joining_g1bg3Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G1BG4 [ar-node] -->
+<NODE tx="-181.1" ty="25.4" tz="151.4" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-link [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g2bg1Details_i,joining_g1bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="35" h="35" d="30" refer="@view:joining_g1bg4Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg1Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_x1xg2Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G1BG4" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="30" ty="24.5" tz="2.7" rx="-45" view="joining_g1bg4Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g1bg4Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G1BG4" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g1bg4Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g1bg4Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor196959/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g1bg4Details_i">
+    <LINK w="35" h="35" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="35" sy="35" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="35" sy="35" sz="30" view="joining_g1bg4Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G2BG1 (barrier) [ar-node] -->
+<NODE tx="-61.7" ty="-48" tz="439" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-link [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg1Details_i,joining_g1bg4Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_g2bg1Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg1Details_i,joining_g1bg4Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G2BG1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="30" ty="24.5" tz="2.7" rx="-45" view="joining_g2bg1Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g2bg1Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G2BG1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g2bg1Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g2bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor196960/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g2bg1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="35" sy="35" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="35" sy="35" sz="30" view="joining_g2bg1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G2BG2 [ar-node] -->
+<NODE tx="-136.2" ty="-48" tz="198.4" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-link [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg1Details_i,joining_g1bg4Details_i,joining_x1fk1Details_i,joining_g2bg1Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_g2bg2Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg1Details_i,joining_g1bg4Details_i,joining_x1fk1Details_i,joining_g2bg1Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G2BG2" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="30" ty="24.5" tz="2.7" rx="-45" view="joining_g2bg2Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g2bg2Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G2BG3" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g2bg2Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g2bg2Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor196959/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g2bg2Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="35" sy="35" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="35" sy="35" sz="30" view="joining_g2bg2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G2BG3 [ar-node] -->
+<NODE tx="-136.2" ty="-48" tz="293.7" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-link [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg1Details_i,joining_g1bg4Details_i,joining_x1fk1Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_g2bg3Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg1Details_i,joining_g1bg4Details_i,joining_x1fk1Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G2BG3" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="30" ty="24.5" tz="2.7" rx="-45" view="joining_g2bg3Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g2bg3Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G2BG3" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g2bg3Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g2bg3Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor196959/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g2bg3Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="35" sy="35" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="35" sy="35" sz="30" view="joining_g2bg3Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- X1XG2 (Io-link DA interface) [ar-node] -->
+<NODE tx="-185.7" ty="79.5" tz="44" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1fk1Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="37" h="100" d="125" refer="@view:joining_x1xg2Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-33" ty="62.7" tz="-29.9" rx="90" sxyz="2" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1fk1Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="X1XG2" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-23" ty="45.2" tz="0.2" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="-40.7" ty="69.2" tz="-6.6" rx="-45" view="joining_x1xg2Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_x1xg2Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="X1XG2" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_x1xg2Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_x1xg2Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images//docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Part8038559/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_x1xg2Details_i">
+    <LINK w="37" h="100" d="125" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="37" sy="100" sz="125" view="joining_inputs,joining_g1bg1Details_i,joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="37" sy="100" sz="125" view="joining_x1xg2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- X1KF1 (rfid) [ar-node] -->
+<NODE tx="-220.7" tz="154.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g2bg1Details_i,joining_g1bg4Details_i,joining_g1bg3Details_i,joining_g1bg2Details_i,joining_g1bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="50" h="50" d="60" refer="@view:joining_x1fk1Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE ty="31" tz="-19" rx="90" view="joining_inputs,joining_g2bg1Details_i,joining_g1bg4Details_i,joining_g1bg3Details_i,joining_g1bg2Details_i,joining_g1bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="X1KF1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-14.3" ty="31" tz="-15.6" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="-58.2" ty="40.9" tz="-23.2" rx="-45" view="joining_x1fk1Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-17.673544505709593" tz="40" rx="90" sxyz="2" view="joining_x1fk1Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="X1KF1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_x1fk1Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_x1fk1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/RFIDModule/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_x1fk1Details_i">
+    <LINK w="50" h="50" d="60" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="50" sy="50" sz="60" view="joining_inputs,joining_g1bg1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="50" sy="50" sz="60" view="joining_x1fk1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- X1KF2 (rfid) [ar-node] -->
+<NODE tx="-15.3" tz="154.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g2bg1Details_i,joining_g1bg4Details_i,joining_g1bg3Details_i,joining_g1bg2Details_i,joining_g1bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk1Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i">
+    <LINK w="50" h="50" d="60" refer="@view:joining_x1fk2Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE ty="31" tz="-19" rx="90" view="joining_inputs,joining_g2bg1Details_i,joining_g1bg4Details_i,joining_g1bg3Details_i,joining_g1bg2Details_i,joining_g1bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk1Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="X1KF2" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-14.3" ty="31" tz="-15.6" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="42.1" ty="40.9" tz="-23.2" rx="-45" view="joining_x1fk2Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-17.673544505709593" tz="40" rx="90" sxyz="2" view="joining_x1fk2Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="X1KF2" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_x1fk2Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_x1fk2Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/RFIDModule/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_x1fk2Details_i">
+    <LINK w="50" h="50" d="60" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="50" sy="50" sz="60" view="joining_inputs,joining_g1bg1Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="50" sy="50" sz="60" view="joining_x1fk2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G3BG1 (reed) [ar-node] -->
+<NODE tx="-81.5" ty="107.7" tz="-32.7" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i">
+    <LINK w="28" h="27" d="30" refer="@view:joining_g3bg1Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G3BG1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="26.3" ty="21.9" tz="15.2" rx="-45" view="joining_g3bg1Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g3bg1Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G3BG1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g3bg1Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor173210/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g3bg1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_x1fk2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_g3bg2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="30" view="joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G3BG2 (reed) [ar-node] -->
+<NODE tx="-81.5" ty="107.7" tz="58.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg1Details_i">
+    <LINK w="28" h="27" d="30" refer="@view:joining_g3bg2Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G3BG2" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="26.3" ty="21.9" tz="15.2" rx="-45" view="joining_g3bg2Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g3bg2Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G3BG2" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g3bg2Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g3bg2Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor173210/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g3bg2Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_x1fk2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="30" view="joining_g3bg2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G3BG3 (reed) [ar-node] -->
+<NODE tx="-73.5" ty="165.7" tz="117.2" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i">
+    <LINK w="28" h="27" d="30" refer="@view:joining_g3bg3Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G3BG3" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="26.3" ty="21.9" tz="15.2" rx="-45" view="joining_g3bg3Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g3bg3Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G3BG3" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g3bg3Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g3bg3Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor173210/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g3bg3Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="30" view="joining_g3bg3Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G3BP1 (vacuum sensor) [ar-node] -->
+<NODE tx="-98.3" ty="118.2" tz="151.9" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i">
+    <LINK w="28" h="27" d="30" refer="@view:joining_g3bp1Details_i" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G3BP1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-5.6" ty="16.3" tz="3.3" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="26.3" ty="21.9" tz="15.2" rx="-45" view="joining_g3bp1Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g3bp1Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G3BP1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g3bp1Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g3bp1Details_i" collapse="" show="">
+        <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor527458/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g3bp1Details_i">
+    <LINK w="30" h="30" d="30" refer="@view:joining_inputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bp1Details_i,joining_g3bg3Details_i,joining_g3bg2Details_i,joining_g3bg1Details_i" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="30" view="joining_inputs,joining_g1bg1Details_i,joining_x1fk2Details_i,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i,joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1fk1Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="30" view="joining_g3bp1Details_i" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+</NODE>
+<!-- Outputs [ar-node] -->
+<NODE view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+<!-- Conveyor1 [ar-node] -->
+<NODE tx="-104.5" ty="-84.4" tz="151.7" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE view="joining_outputs,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o">
+    <LINK w="350" h="65" d="86" refer="@view:joining_conv1Details_o" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-10.4" ty="43.7" tz="3.8" rx="90" sxyz="2" view="joining_outputs,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <TEXT rgba="#000000FF" label="Conveyor module" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-23" ty="45.2" tz="0.2" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="152.1" ty="66.9" tz="-6.6" rx="-45" view="joining_conv1Details_o" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_conv1Details_o" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="Conveyor" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_conv1Details_o" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_conv1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images//docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Part8064284/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_conv1Details_o">
+    <LINK w="350" h="65" d="86" refer="@view:joining_outputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="350" sy="65" sz="86" view="joining_outputs,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="350" sy="65" sz="86" view="joining_conv1Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- Conveyor2 [ar-node] -->
+<NODE tx="-106.2" ty="-84.4" tz="331.3" ry="-90" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_outputs,joining_conv1Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o">
+    <LINK w="300" h="65" d="86" refer="@view:joining_conv2Details_o" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-10.4" ty="43.7" tz="3.8" rx="90" sxyz="2" view="joining_outputs,joining_conv1Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <TEXT rgba="#000000FF" label="Conveyor module" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-23" ty="45.2" tz="0.2" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="-15" ty="66.9" tz="-21.4" rx="-45" ry="90" view="joining_conv2Details_o" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_conv2Details_o" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="Conveyor" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_conv2Details_o" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_conv2Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images//docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Part8064284/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_conv2Details_o">
+    <LINK w="300" h="65" d="86" refer="@view:joining_outputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="300" sy="65" sz="86" view="joining_outputs,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o,joining_conv1Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="300" sy="65" sz="86" view="joining_conv2Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G1MB1 [ar-node] -->
+<NODE tx="-83.4" ty="-57.1" tz="92.1" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o">
+    <LINK w="100" h="55" d="55" refer="@view:joining_g1mb1Details_o" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-10.4" ty="29" tz="3.8" rx="90" sxyz="2" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G1MB1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-23" ty="29" tz="0.2" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="55.9" ty="66.9" tz="-21.4" rx="-45" view="joining_g1mb1Details_o" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g1mb1Details_o" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G1MB1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g1mb1Details_o" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g1mb1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images//docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Aktor532952/Documentation/DataSheet_en.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g1mb1Details_o">
+    <LINK w="100" h="55" d="55" refer="@view:joining_outputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="100" sy="55" sz="55" view="joining_outputs,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o,joining_conv1Details_o,joining_conv2Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="100" sy="55" sz="55" view="joining_g1mb1Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G3MM1 (horizontal axis) [ar-node] -->
+<NODE tx="-102.6" ty="102.5" tz="5" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o">
+    <LINK w="62" h="173" d="36" refer="@view:joining_g3mm1Details_o" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-25.4" ty="19" tz="-33.1" rx="90" sxyz="2" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G3MM1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-20.3" ty="19" tz="-22.6" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="38.7" ty="29.8" tz="-12.9" rx="-45" view="joining_g3mm1Details_o" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g3mm1Details_o" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G3MM1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g3mm1Details_o" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g3mm1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images//docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Aktor543930/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g3mm1Details_o">
+    <LINK w="62" h="173" d="36" refer="@view:joining_outputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="62" sy="173" sz="36" view="joining_outputs,joining_g3mm2Details_o,joining_g3kh1Details_o,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="62" sy="173" sz="36" view="joining_g3mm1Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G3MM2 (vertical axis) [ar-node] -->
+<NODE tx="-102.6" ty="141.1" tz="115" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE rx="90" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3kh1Details_o">
+    <LINK w="50" h="30" d="155" refer="@view:joining_g3mm2Details_o" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-27.8" ty="79" tz="-2.1" rx="90" sxyz="2" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G3MM2" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="-15.2" ty="79" tz="6.7" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="47.7" ty="29.8" tz="-1.5" rx="-45" view="joining_g3mm2Details_o" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g3mm2Details_o" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G3MM2" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g3mm2Details_o" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g3mm2Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images//docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Aktor543930/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g3mm2Details_o">
+    <LINK w="50" h="30" d="155" refer="@view:joining_outputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="50" sy="30" sz="155" view="joining_outputs,joining_g3kh1Details_o,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="50" sy="30" sz="155" view="joining_g3mm2Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+<!-- G3KH1(vacuum generator) [ar-node] -->
+<NODE tx="-101.7" ty="111.8" tz="151.6" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- open-details [ar-link] -->
+    <NODE ty="-1.8" rx="90" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o">
+    <LINK w="30" h="30" d="50" refer="@view:joining_g3kh1Details_o" rgb="FFFFFF"/>
+    </NODE>
+    <!--  [ar-text] -->
+    <NODE tx="-19.5" ty="24" tz="14.2" rx="90" sxyz="2" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G3KH1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+    </NODE>
+    <!-- ar-static-image [ar-static-image] -->
+    <NODE tx="9.9" ty="24" tz="-6.7" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <NODE sx="15" sy="1" sz="15" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images/info_rounded_hero.png">
+        </MODEL>
+    </NODE>
+    </NODE>
+    <!-- details [ar-node] -->
+    <NODE tx="47.7" ty="29.8" tz="-1.5" rx="-45" view="joining_g3kh1Details_o" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g3kh1Details_o" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G3KH1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g3kh1Details_o" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="planexy" texture="images//docu_rounded_colored.png">
+            <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Part193552/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+        </MODEL>
+        </NODE>
+    </NODE>
+    </NODE>
+    <!-- active-link [ar-link] -->
+    <NODE rx="90" view="joining_g3kh1Details_o">
+    <LINK w="30" h="30" d="50" refer="@view:joining_outputs" rgb="0091DC"/>
+    </NODE>
+    <!-- wireframe [ar-node] -->
+    <NODE view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o,joining_g3kh1Details_o" collapse="" show="">
+    <!-- inactive [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="50" view="joining_outputs,joining_conv1Details_o,joining_conv2Details_o,joining_g1mb1Details_o,joining_g3mm1Details_o,joining_g3mm2Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#B6BEC6">
+        </MODEL>
+    </NODE>
+    <!-- active [ar-model] -->
+    <NODE rx="90" sx="30" sy="30" sz="50" view="joining_g3kh1Details_o" collapse="" show="">
+        <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+        </MODEL>
+    </NODE>
+    </NODE>
+</NODE>
+</NODE>
