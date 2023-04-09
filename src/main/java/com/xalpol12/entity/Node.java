@@ -1,6 +1,5 @@
 package com.xalpol12.entity;
 
-import com.xalpol12.adapter.MyFloatConverter;
 import lombok.Data;
 
 import javax.xml.bind.annotation.XmlAttribute;
