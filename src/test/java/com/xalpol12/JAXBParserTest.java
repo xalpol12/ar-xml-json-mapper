@@ -92,9 +92,9 @@ class JAXBParserTest {
 
     private Node createNode() {
         Node node = new Node();
-        node.setTz(0.03);
-        node.setRx(90);
-        node.setSxyz(0.001);
+        node.setTz("0.03");
+        node.setRx("90");
+        node.setSxyz("0.001");
         return node;
     }
 
@@ -120,7 +120,7 @@ class JAXBParserTest {
         camera.setDistance(0.1);
 
         Node node = new Node();
-        node.setSxyz(0.001);
+        node.setSxyz("0.001");
 
         camera.setNode(node);
         return camera;
