@@ -1,6 +1,6 @@
 package com.xalpol12;
 
-import com.xalpol12.entity.Augmentation;
+import com.xalpol12.xmlentity.Augmentation;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

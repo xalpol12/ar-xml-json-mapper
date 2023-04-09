@@ -1,12 +1,10 @@
 package com.xalpol12;
 
-import com.xalpol12.entity.*;
+import com.xalpol12.xmlentity.*;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;
 
-import java.security.Key;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;

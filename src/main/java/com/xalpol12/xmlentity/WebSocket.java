@@ -1,4 +1,4 @@
-package com.xalpol12.entity;
+package com.xalpol12.xmlentity;
 
 import lombok.Data;
 

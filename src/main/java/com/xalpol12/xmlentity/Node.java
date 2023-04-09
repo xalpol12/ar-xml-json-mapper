@@ -1,4 +1,4 @@
-package com.xalpol12.entity;
+package com.xalpol12.xmlentity;
 
 import lombok.Data;
 
@@ -6,7 +6,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.List;
 
 //Node in xml has a couple of different variations, @required = true  ignores null attributes during marshalling
