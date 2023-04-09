@@ -19,15 +19,15 @@ public class Node {
     private String view;
     private String collapse;
     private String show;
-    private String tx;  // reason that all these attributes are String (could be float) is that annotating it using
-    private String ty;  // @XmlAttribute(required = true) as float still generates the attribute as 0.0 value in final xml file,
-    private String tz;  // so in order to omit this kind of behaviour i've decided to change their type to String, which resolves the problem
-    private String sxyz;
-    private String sx;
-    private String sy;
-    private String sz;
-    private String rx;
-    private String ry;
+    private Float tx;  // reason that all these attributes are String (could be float) is that annotating it using
+    private Float ty;  // @XmlAttribute(required = true) as float still generates the attribute as 0.0 value in final xml file,
+    private Float tz;  // so in order to omit this kind of behaviour i've decided to change their type to String, which resolves the problem
+    private Float sxyz;
+    private Float sx;
+    private Float sy;
+    private Float sz;
+    private Float rx;
+    private Float ry;
     private Text text;
     private Model model;
     private Switch aSwitch;
@@ -55,48 +55,47 @@ public class Node {
     }
 
     @XmlAttribute(required = true)
-    public void setTx(String tx) {
+    public void setTx(Float tx) {
         this.tx = tx;
     }
 
-    // TODO: Figure out how to null not used values
     @XmlAttribute(required = true)
-    public void setTy(String ty) {
+    public void setTy(Float ty) {
         this.ty = ty;
     }
 
     @XmlAttribute(required = true)
-    public void setTz(String tz) {
+    public void setTz(Float tz) {
         this.tz = tz;
     }
 
     @XmlAttribute(required = true)
-    public void setSxyz(String sxyz) {
+    public void setSxyz(Float sxyz) {
         this.sxyz = sxyz;
     }
 
     @XmlAttribute(required = true)
-    public void setSx(String sx) {
+    public void setSx(Float sx) {
         this.sx = sx;
     }
 
     @XmlAttribute(required = true)
-    public void setSy(String sy) {
+    public void setSy(Float sy) {
         this.sy = sy;
     }
 
     @XmlAttribute(required = true)
-    public void setSz(String sz) {
+    public void setSz(Float sz) {
         this.sz = sz;
     }
 
     @XmlAttribute(required = true)
-    public void setRx(String rx) {
+    public void setRx(Float rx) {
         this.rx = rx;
     }
 
     @XmlAttribute(required = true)
-    public void setRy(String ry) {
+    public void setRy(Float ry) {
         this.ry = ry;
     }
 

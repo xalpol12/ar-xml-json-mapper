@@ -18,8 +18,6 @@ public class Main {
 //        JAXBParser.marshall(augmentation, "newFile.xml");
 
         Node node = new Node();
-        node.setTx("-106.2");
-
-
+        node.setTx(106.2f);
     }
 }
