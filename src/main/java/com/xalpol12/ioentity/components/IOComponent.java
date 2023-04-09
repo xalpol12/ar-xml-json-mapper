@@ -2,7 +2,7 @@ package com.xalpol12.ioentity.components;
 
 import com.xalpol12.xmlentity.Node;
 
-public abstract class IOComponent extends Node{
+public abstract class IOComponent extends Node {
     public Node mainNode;
 
     public IOComponent(Node mainNode) {

@@ -1,9 +1,10 @@
-package com.xalpol12.ioentity.components;
+package com.xalpol12.ioentity.components.artext;
 
+import com.xalpol12.ioentity.components.IOComponent;
 import com.xalpol12.xmlentity.Node;
 import com.xalpol12.xmlentity.Text;
 
-public class ARText extends IOComponent{
+public class ARText extends IOComponent {
     private Text text;
 
     public ARText(Node mainNode, Text text) {

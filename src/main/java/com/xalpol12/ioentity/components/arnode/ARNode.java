@@ -1,5 +1,6 @@
-package com.xalpol12.ioentity.components;
+package com.xalpol12.ioentity.components.arnode;
 
+import com.xalpol12.ioentity.components.IOComponent;
 import com.xalpol12.xmlentity.Node;
 
 import java.util.List;

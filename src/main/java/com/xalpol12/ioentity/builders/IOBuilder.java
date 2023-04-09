@@ -1,7 +1,8 @@
 package com.xalpol12.ioentity.builders;
 
+import com.xalpol12.ioentity.IOObject;
+
 public interface IOBuilder {
-    public void reset();
     public void setOpenDetails();
     public void setText();
     public void setStaticImage();
@@ -10,7 +11,6 @@ public interface IOBuilder {
     public void setDatasheet();
     public void setActiveLink();
     public void setWireframe();
-    public void setInactive();
-    public void setActive();
     public void setMainNode();
+    public IOObject getObject();
 }

@@ -1,7 +1,6 @@
 package com.xalpol12;
 
 
-import com.xalpol12.ioentity.components.ARNode;
 import com.xalpol12.xmlentity.*;
 
 import javax.xml.bind.JAXBException;
