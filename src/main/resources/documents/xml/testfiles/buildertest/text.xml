@@ -1,0 +1,4 @@
+<NODE tx="-12" ty="15.4" tz="-7.1" rx="90" view="joining_inputs,joining_g1bg2Details_i,joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i,joining_x1fk1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i,joining_x1xg2Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i,joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i" collapse="" show="">
+    <TEXT rgba="#000000FF" label="G1BG1" width="100" backrgba="#FFFFFFFF">
+    </TEXT>
+</NODE>

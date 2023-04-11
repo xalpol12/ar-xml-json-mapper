@@ -1,6 +1,8 @@
 package com.xalpol12.ioentity.components;
 
-public interface IOComponentBuilder<IOComponent> {
+import com.xalpol12.xmlentity.Node;
+
+public interface IOComponentBuilder {
     public void setMainNode();
-    IOComponent getComponent();
+    Node getComponent();
 }

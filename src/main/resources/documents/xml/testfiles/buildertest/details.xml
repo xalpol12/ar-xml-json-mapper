@@ -1,0 +1,15 @@
+<NODE tx="-39.1" ty="24.5" tz="2.7" rx="-45" view="joining_g1bg1Details_i" collapse="" show="">
+    <!-- MenuName [ar-text] -->
+    <NODE tx="-20" tz="40" rx="90" sxyz="2" view="joining_g1bg1Details_i" collapse="" show="">
+        <TEXT rgba="#FFFFFFFF" label="G1BG1" width="100" backrgba="#0091DCFF">
+        </TEXT>
+    </NODE>
+    <!-- datasheet [ar-link-2d] -->
+    <NODE view="joining_g1bg1Details_i" collapse="" show="">
+        <NODE sx="30" sy="1" sz="30" view="joining_g1bg1Details_i" collapse="" show="">
+            <MODEL file="planexy" texture="images/docu_rounded_colored.png">
+                <LINK refer="http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/Sensor196959/Documentation/DataSheet.pdf" w="0" h="0" d="1"/>
+            </MODEL>
+        </NODE>
+    </NODE>
+</NODE>
