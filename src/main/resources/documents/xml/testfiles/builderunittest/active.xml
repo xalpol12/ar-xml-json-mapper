@@ -1,0 +1,5 @@
+<!-- active [ar-model] -->
+<NODE sx="30" sy="30" sz="30" view="joining_g1bg1Details_i" collapse="" show="">
+    <MODEL file="cube" texture="images/grid.png" tint="#0091DC">
+    </MODEL>
+</NODE>

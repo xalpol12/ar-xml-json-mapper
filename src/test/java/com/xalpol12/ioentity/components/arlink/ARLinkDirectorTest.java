@@ -10,8 +10,8 @@ import javax.xml.bind.JAXBException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ARLinkDirectorTest {
-    private static final String ACTIVE_LINK = StringManager.ROOT + "/buildertest/activelink.xml";
-    private static final String OPEN_DETAILS = StringManager.ROOT + "/buildertest/opendetails.xml";
+    private static final String ACTIVE_LINK = StringManager.DIRECTOR_UNIT_TEST_DIR + "/activelink.xml";
+    private static final String OPEN_DETAILS = StringManager.DIRECTOR_UNIT_TEST_DIR + "/opendetails.xml";
 
     @Test
     void givenActiveLinkFromFile_whenCreateActiveLinkUsingBuilder_thenObjectsAreEqual() throws JAXBException {

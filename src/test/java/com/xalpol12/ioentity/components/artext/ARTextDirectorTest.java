@@ -10,8 +10,8 @@ import javax.xml.bind.JAXBException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ARTextDirectorTest {
-    private static final String AR_TEXT = StringManager.ROOT + "/buildertest/text.xml";
-    private static final String AR_MENU_NAME = StringManager.ROOT + "/buildertest/menuname.xml";
+    private static final String AR_TEXT = StringManager.DIRECTOR_UNIT_TEST_DIR + "/text.xml";
+    private static final String AR_MENU_NAME = StringManager.DIRECTOR_UNIT_TEST_DIR + "/menuname.xml";
 
     @Test
     void givenTextNodeFromFile_whenCreateTextNodeUsingBuilder_thenObjectsAreEqual() throws JAXBException {
