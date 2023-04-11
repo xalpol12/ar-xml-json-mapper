@@ -15,15 +15,15 @@ public class ARNodeDirector {
         builder.setTy(24.5f);
         builder.setTz(2.7f);
         builder.setRx(-45f);
-        builder.setMenuName(menuName);
-        builder.setDatasheet(datasheet);
+        builder.addSubComponent(menuName);
+        builder.addSubComponent(datasheet);
         builder.setMainNode();
     }
 
     public void constructWireframe(ARNodeBuilder builder, Node inactive, Node active) {
         commonSetup(builder);
-        builder.setInactive(inactive);
-        builder.setActive(active);
+        builder.addSubComponent(inactive);
+        builder.addSubComponent(active);
         builder.setMainNode();
     }
 }

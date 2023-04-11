@@ -7,7 +7,8 @@ public final class StringManager {
     private StringManager() {} //prevents instantiation
 
     public static final String ROOT = "src/main/resources/documents/xml/testfiles";
-    public static final String DIRECTOR_UNIT_TEST_DIR = ROOT + "/builderunittest";
+    public static final String DIRECTOR_UNIT_TEST_DIR = ROOT + "/directorunittest";
+    public static final String DIRECTOR_INTEGRATION_TEST_DIR = ROOT + "/directorintegrationtest";
     public static final String UNM_TEST = ROOT + "/unmarshallertest";
     public static final String TEST_WEBSOCKET = UNM_TEST + "/test_websocket.xml";
     public static final String TEST_VALUESERVER = UNM_TEST + "/test_valueserver.xml";
