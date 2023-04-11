@@ -1,11 +1,21 @@
 package com.xalpol12.ioentity.builders;
 
-import com.xalpol12.ioentity.IOObject;
 import com.xalpol12.ioentity.components.arlink.ARLinkBuilder;
 import com.xalpol12.ioentity.components.arlink.ARLinkDirector;
+import com.xalpol12.ioentity.components.arlink2d.ARLink2DBuilder;
+import com.xalpol12.ioentity.components.arlink2d.ARLink2DDirector;
+import com.xalpol12.ioentity.components.armodel.ARModelBuilder;
+import com.xalpol12.ioentity.components.armodel.ARModelDirector;
+import com.xalpol12.ioentity.components.arnode.ARNode;
 import com.xalpol12.ioentity.components.arnode.ARNodeBuilder;
 import com.xalpol12.ioentity.components.arnode.ARNodeDirector;
+import com.xalpol12.ioentity.components.arstaticimage.ARStaticImageBuilder;
+import com.xalpol12.ioentity.components.arstaticimage.ARStaticImageDirector;
+import com.xalpol12.ioentity.components.artext.ARTextBuilder;
+import com.xalpol12.ioentity.components.artext.ARTextDirector;
 import com.xalpol12.xmlentity.Node;
+
+import java.util.List;
 
 public class IOObjectBuilder implements IOBuilder{
     private final Float tx;
@@ -13,13 +23,18 @@ public class IOObjectBuilder implements IOBuilder{
     private final Float tz;
     private final String label;
     private final String view;
-    private String objectView;
+    private final String objectView;
+    private final String viewExcludingObject;
+    private final String objectRefer;
+    private String collapse;
+    private String show;
     private Node openDetails;
     private Node arText;
     private Node staticImage;
     private Node details;
     private Node activeLink;
     private Node wireframe;
+    private Node mainNode;
 
     public IOObjectBuilder(Float tx, Float ty, Float tz, String label, String view) {
         this.tx = tx;
@@ -27,69 +42,112 @@ public class IOObjectBuilder implements IOBuilder{
         this.tz = tz;
         this.label = label.toUpperCase();
         this.view = view;
-        objectView = "joining_" + label.toLowerCase() + "Details_i";
+        collapse = "";  // TODO: create setter for this attribute
+        show = "";
+        viewExcludingObject = "joining_inputs,joining_g1bg2Details_i," +
+                "joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i," +
+                "joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i," +
+                "joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i," +
+                "joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i";
+        objectView = "joining_" + label.toLowerCase() + "Details_i"; // TODO: Add enum type for different workstations
+        objectRefer = "@view:" + objectView;
+        mainNode = new Node();
     }
 
     @Override
     public void setOpenDetails() {
-
+        ARLinkBuilder builder = new ARLinkBuilder(view, objectRefer);
+        ARLinkDirector director = new ARLinkDirector();
+        director.constructOpenDetails(builder);
+        openDetails = builder.getComponent();
     }
 
     @Override
     public void setText() {
-
+        ARTextBuilder builder = new ARTextBuilder(viewExcludingObject, label); // TODO: view without current object
+        ARTextDirector director =  new ARTextDirector();
+        director.constructTextNode(builder);
+        arText = builder.getComponent();
     }
 
     @Override
     public void setStaticImage() {
+        ARStaticImageBuilder builder = new ARStaticImageBuilder(view);
+        ARStaticImageDirector director = new ARStaticImageDirector();
+        director.constructStaticImage(builder);
+        staticImage = builder.getComponent();
+    }
 
+    private Node setMenuName() {
+        ARTextBuilder builder = new ARTextBuilder(objectView, label);
+        ARTextDirector director = new ARTextDirector();
+        director.constructMenuName(builder);
+        return builder.getComponent();
+    }
+
+    private Node setDatasheet() {
+        ARLink2DBuilder builder = new ARLink2DBuilder(objectView);
+        ARLink2DDirector director = new ARLink2DDirector();
+        director.constructDatasheet(builder);
+        return builder.getComponent();
     }
 
     @Override
     public void setDetails() {
-
-    }
-
-    @Override
-    public void setMenuName() {
-
-    }
-
-    @Override
-    public void setDatasheet() {
-
+        Node menuName = setMenuName();
+        Node datasheet = setDatasheet();
+        ARNodeBuilder builder = new ARNodeBuilder(view);
+        ARNodeDirector director = new ARNodeDirector();
+        director.constructDetails(builder, menuName, datasheet);
+        details = builder.getComponent();
     }
 
     @Override
     public void setActiveLink() {
-//        Float rx = 90f;
-//        int w = 30;
-//        int h = 30;
-//        int d = 30;
-//        String refer = "@view:joining_inputs";
-//        String rgb = "0091DC";
-//
-//        ARLinkBuilder builder = new ARLinkBuilder(objectView, rx, w, h, d, refer, rgb);
-//        ARLinkDirector director = new ARLinkDirector();
-//        director.constructActiveLink(builder);
-//        activeLink = builder.getComponent();
+        String refer = "@view:joining_inputs"; // TODO: dynamically create refer variables
+        ARLinkBuilder builder = new ARLinkBuilder(objectView, refer);
+        ARLinkDirector director = new ARLinkDirector();
+        director.constructActiveLink(builder);
+        activeLink = builder.getComponent();
+    }
+
+    private Node setInactive() {
+        ARModelBuilder builder = new ARModelBuilder(viewExcludingObject); // TODO: view without current viewModel
+        ARModelDirector director = new ARModelDirector();
+        director.constructInactive(builder);
+        return builder.getComponent();
+    }
+
+    private Node setActive() {
+        ARModelBuilder builder = new ARModelBuilder(objectView);
+        ARModelDirector director = new ARModelDirector();
+        director.constructActive(builder);
+        return builder.getComponent();
     }
 
     @Override
     public void setWireframe() {
-//        ARNodeBuilder builder = new ARNodeBuilder();
-//        ARNodeDirector director = new ARNodeDirector();
-//        director.constructComponent(builder);
-//        wireframe = builder.getComponent();
+        Node inactive = setInactive();
+        Node active = setActive();
+        ARNodeBuilder builder = new ARNodeBuilder(view);
+        ARNodeDirector director = new ARNodeDirector();
+        director.constructWireframe(builder, inactive, active);
+        wireframe = builder.getComponent();
     }
 
     @Override
     public void setMainNode() {
-
+        mainNode.setTx(tx);
+        mainNode.setTy(ty);
+        mainNode.setTz(tz);
+        mainNode.setView(view);
+        mainNode.setCollapse(collapse);
+        mainNode.setShow(show);
     }
 
     @Override
-    public IOObject getObject() {
-        return null;
+    public Node getObject() {
+        return new ARNode(mainNode, List.of(openDetails, arText,
+                staticImage, details, activeLink, wireframe)).getMainNode();
     }
 }
