@@ -6,38 +6,68 @@ import com.xalpol12.xmlentity.Target;
 import com.xalpol12.xmlentity.TargetBase;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 public class AugmentationManager {
-    public static Augmentation insertObjects(Augmentation augmentation, List<Node> objects) {
-        TargetBase targetBase = augmentation.getTargetBase(); // unwrap all parent elements
-        Target target = targetBase.getTarget();
-        Node targetNode = target.getNode();
-        List<Node> nodes = targetNode.getNodeList();
-        Node ioMainNode = nodes.get(3); // TODO: Replace with list searching for elements containing a keyword
-        List<Node> ioSubNodes = ioMainNode.getNodeList();
-        Node inputsMainNode = ioSubNodes.get(1); // index of Inputs [ar-node] in Joining_01
-        List<Node> remainingInputObjects = inputsMainNode.getNodeList();
+    private final TargetBase targetBase;
+    private final Target target;
+    private final Node targetMainNode;
+    private final List<Node> targetSubNodes;
+    private final Node ioMainNode;
+    private final List<Node> ioSubNodes;
 
-        // Hierarchy: Augmentation -> TargetBase -> Target -> targetNode -> nodes -> ioMainNode -> ioSubNodes -> inputsMainNode
-        nodes.remove(ioMainNode);                   // remove old ioMainNode that will be replaced by ioMainNode with
-                                                    // modified subNodes
+    public AugmentationManager(Augmentation augmentation) {
+        targetBase = augmentation.getTargetBase();
+        target = targetBase.getTarget();
+        targetMainNode = target.getNode();
+        targetSubNodes = targetMainNode.getNodeList();
+        ioMainNode = findIONode(targetSubNodes);
+        ioSubNodes = Objects.requireNonNull(ioMainNode).getNodeList();
+    }
 
-        ioSubNodes.remove(inputsMainNode);          // firstly remove old inputMainNode from parent list
+    private Node findIONode(List<Node> nodes) {
+        for (Node node : nodes) {
+            if (node.getView().equals("") && node.getCollapse().equals("")
+                    && node.getShow().equals("") && node.getTx() == null
+                    && nodes.indexOf(node) != 0) {
+                return node;
+            }
+        }
+        return null;
+    }
 
-        // concatenate new objects with already written object:
-        List<Node> newInputObjects = Stream.concat(remainingInputObjects.stream(), objects.stream()).toList();
+    private Node findInputNode(List<Node> nodes) {
+        for (Node node : nodes) {
+            if (node.getView().contains("_inputs") && !node.getView().contains("_IO")) return node;
+        }
+        return null;
+    }
 
-        inputsMainNode.setNodeList(newInputObjects);        // set new inputMainNode which replaces the old one
+    public void insertInputObjects(Augmentation augmentation, List<Node> objects) {
+        Node inputsMainNode = findInputNode(ioSubNodes);
+        List<Node> newInputObjects;
+        if (inputsMainNode != null) {
+             newInputObjects = Stream.concat(inputsMainNode.getNodeList().stream(), objects.stream()).toList();
+        } else {
+            newInputObjects = objects;
+        }
+
+        targetSubNodes.remove(ioMainNode);
+        ioSubNodes.remove(inputsMainNode);
+
+        inputsMainNode.setNodeList(newInputObjects);
         ioSubNodes.add(ioSubNodes.size() - 2, inputsMainNode);  // add new inputMainNode to the parent list at second to last index
 
-        ioMainNode.setNodeList(ioSubNodes);         // wrap remaining elements to their respective parent nodes
-        nodes.add(nodes.size() - 1, ioMainNode);
-        targetNode.setNodeList(nodes);
-        target.setNode(targetNode);
+        ioMainNode.setNodeList(ioSubNodes);                         // wrap remaining elements to their respective parent nodes
+        targetSubNodes.add(targetSubNodes.size() - 1, ioMainNode);
+        targetMainNode.setNodeList(targetSubNodes);
+        target.setNode(targetMainNode);
         targetBase.setTarget(target);
         augmentation.setTargetBase(targetBase);
+    }
 
-        return augmentation;
+    public static void deleteAllInputObjects(Augmentation augmentation) {
+
     }
 }
