@@ -56,7 +56,7 @@ public class IOObjectBuilder implements IOBuilder{
 
     @Override
     public void setOpenDetails() {
-        ARLinkBuilder builder = new ARLinkBuilder(view, objectRefer);
+        ARLinkBuilder builder = new ARLinkBuilder(viewExcludingObject, objectRefer);
         ARLinkDirector director = new ARLinkDirector();
         director.constructOpenDetails(builder);
         openDetails = builder.getComponent();
@@ -96,7 +96,7 @@ public class IOObjectBuilder implements IOBuilder{
     public void setDetails() {
         Node menuName = setMenuName();
         Node datasheet = setDatasheet();
-        ARNodeBuilder builder = new ARNodeBuilder(view);
+        ARNodeBuilder builder = new ARNodeBuilder(objectView);
         ARNodeDirector director = new ARNodeDirector();
         director.constructDetails(builder, menuName, datasheet);
         details = builder.getComponent();

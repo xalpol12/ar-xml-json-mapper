@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @Data
 @XmlRootElement(name = "LINK")
-@XmlType(propOrder = {"refer", "w", "h", "d", "rgb"})
+@XmlType(propOrder = {"w", "h", "d", "refer", "rgb"})
 public class Link {
     private String refer;
     private int w;

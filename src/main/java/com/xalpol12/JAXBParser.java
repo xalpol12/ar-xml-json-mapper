@@ -1,5 +1,6 @@
 package com.xalpol12;
 
+import com.xalpol12.helpers.FileHandler;
 import com.xalpol12.xmlentity.Augmentation;
 
 import javax.xml.bind.JAXBContext;
@@ -34,11 +35,11 @@ public class JAXBParser {
         return (T) context.createUnmarshaller().unmarshal(file);
     }
 
-    public static void marshall(Augmentation augmentation, String newFileName) throws JAXBException, TransformerException {
+    public static void marshall(Object node, String newFileName) throws JAXBException, TransformerException {
         Marshaller marshaller = getConfiguredMarshaller();
         Transformer transformer = getConfiguredTransformer();
         StringWriter stringWriter = new StringWriter();
-        marshaller.marshal(augmentation, stringWriter); // TODO: Check if filename ends with .xml
+        marshaller.marshal(node, stringWriter); // TODO: Check if filename ends with .xml
         transformer.transform(new StreamSource(new StringReader(stringWriter.toString())), new StreamResult(new File(newFileName)));
     }
 }
