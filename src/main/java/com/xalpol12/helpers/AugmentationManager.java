@@ -26,6 +26,8 @@ public class AugmentationManager {
         ioSubNodes = Objects.requireNonNull(ioMainNode).getNodeList();
     }
 
+    // checks for first non-zero indexed node with empty "view", "collapse" and "show" - it is important
+    // to maintain order of nodes between parsings
     private Node findIONode(List<Node> nodes) {
         for (Node node : nodes) {
             if (node.getView().equals("") && node.getCollapse().equals("")
@@ -37,6 +39,7 @@ public class AugmentationManager {
         return null;
     }
 
+    // checks for node with "view" containing _inputs
     private Node findInputNode(List<Node> nodes) {
         for (Node node : nodes) {
             if (node.getView().contains("_inputs") && !node.getView().contains("_IO")) return node;
@@ -53,13 +56,16 @@ public class AugmentationManager {
             newInputObjects = objects;
         }
 
+        // prevents node duplication upon insertion
         targetSubNodes.remove(ioMainNode);
         ioSubNodes.remove(inputsMainNode);
 
+        // add new inputMainNode to the parent list at second to last index
         inputsMainNode.setNodeList(newInputObjects);
-        ioSubNodes.add(ioSubNodes.size() - 2, inputsMainNode);  // add new inputMainNode to the parent list at second to last index
+        ioSubNodes.add(ioSubNodes.size() - 2, inputsMainNode);
 
-        ioMainNode.setNodeList(ioSubNodes);                         // wrap remaining elements to their respective parent nodes
+        // wrap remaining elements to their respective parent nodes
+        ioMainNode.setNodeList(ioSubNodes);
         targetSubNodes.add(targetSubNodes.size() - 1, ioMainNode);
         targetMainNode.setNodeList(targetSubNodes);
         target.setNode(targetMainNode);
@@ -67,7 +73,8 @@ public class AugmentationManager {
         augmentation.setTargetBase(targetBase);
     }
 
-    public static void deleteAllInputObjects(Augmentation augmentation) {
-
+    public void deleteAllInputObjects(Augmentation augmentation) {
+        Node inputsMainNode = findInputNode(ioSubNodes);
+        inputsMainNode.getNodeList().clear();
     }
 }
