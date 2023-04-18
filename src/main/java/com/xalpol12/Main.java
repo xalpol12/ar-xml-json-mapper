@@ -7,7 +7,6 @@ import com.xalpol12.xmlentity.Node;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.transform.TransformerException;
-import java.util.List;
 
 public class Main {
 

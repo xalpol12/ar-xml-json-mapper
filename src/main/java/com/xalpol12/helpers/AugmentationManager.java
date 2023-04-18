@@ -40,9 +40,16 @@ public class AugmentationManager {
     }
 
     // checks for node with "view" containing _inputs
-    private Node findInputNode(List<Node> nodes) {
-        for (Node node : nodes) {
+    private Node findInputNode(List<Node> ioSubNodes) {
+        for (Node node : ioSubNodes) {
             if (node.getView().contains("_inputs") && !node.getView().contains("_IO")) return node;
+        }
+        return null;
+    }
+
+    private Node findOutputNode(List<Node> ioSubNodes) {
+        for (Node node : ioSubNodes) {
+            if (node.getView().contains("_outputs") && !node.getView().contains("_IO")) return node;
         }
         return null;
     }
@@ -76,5 +83,12 @@ public class AugmentationManager {
     public void deleteAllInputObjects(Augmentation augmentation) {
         Node inputsMainNode = findInputNode(ioSubNodes);
         inputsMainNode.getNodeList().clear();
+    }
+
+    public void insertOutputObjects(Augmentation augmentation, List<Node> objects) {
+    }
+
+    public void deleteAllOutputObjects(Augmentation augmentation) {
+        Node outputsMainNode = findOutputNode(ioSubNodes);
     }
 }
