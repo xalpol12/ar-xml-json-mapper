@@ -13,6 +13,7 @@ import com.xalpol12.entity.ioentity.components.arnode.ARNode;
 import com.xalpol12.entity.ioentity.components.arstaticimage.ARStaticImageDirector;
 import com.xalpol12.entity.ioentity.components.artext.ARTextBuilder;
 import com.xalpol12.entity.ioentity.components.artext.ARTextDirector;
+import com.xalpol12.entity.jsonentity.Vector3;
 import com.xalpol12.entity.xmlentity.Node;
 
 import java.util.List;
@@ -21,6 +22,12 @@ public class IOObjectBuilder implements IOBuilder{
     private final Float tx;
     private final Float ty;
     private final Float tz;
+    private final Float rx;
+    private final Float ry;
+    private final Float rz;
+    private final Float sx;
+    private final Float sy;
+    private final Float sz;
     private final String label;
     private final String view;
     private final String objectView;
@@ -36,21 +43,34 @@ public class IOObjectBuilder implements IOBuilder{
     private Node wireframe;
     private Node mainNode;
 
-    public IOObjectBuilder(Float tx, Float ty, Float tz, String label, String view) {
-        this.tx = tx;
-        this.ty = ty;
-        this.tz = tz;
+    public IOObjectBuilder(Vector3 position, Vector3 rotation, Vector3 scale, String label, List<String> view) {
+        this.tx = position.x();
+        this.ty = position.y();
+        this.tz = position.z();
+
+        this.rx = rotation.x();
+        this.ry = rotation.y();
+        this.rz = rotation.z();
+
+        this.sx = scale.x();
+        this.sy = scale.y();
+        this.sz = scale.z();
+
         this.label = label.toUpperCase();
-        this.view = view;
+        this.view = view.toString()
+                .replace("[", "")
+                .replace("]", "");
+
         collapse = "";  // TODO: create setter for this attribute
         show = "";
-        viewExcludingObject = "joining_inputs,joining_g1bg2Details_i," +
-                "joining_g1bg3Details_i,joining_g1bg4Details_i,joining_x1xg2Details_i," +
-                "joining_g2bg1Details_i,joining_g2bg2Details_i,joining_g2bg3Details_i," +
-                "joining_x1fk1Details_i,joining_x1fk2Details_i,joining_g3bg1Details_i," +
-                "joining_g3bg2Details_i,joining_g3bg3Details_i,joining_g3bp1Details_i";
+
+        if (view.contains(label.toLowerCase())) {
+            viewExcludingObject = view.remove(view.indexOf(label.toLowerCase()));
+        } else viewExcludingObject = this.view;
+
         objectView = "joining_" + label.toLowerCase() + "Details_i"; // TODO: Add enum type for different workstations
         objectRefer = "@view:" + objectView;
+
         mainNode = new Node();
     }
 

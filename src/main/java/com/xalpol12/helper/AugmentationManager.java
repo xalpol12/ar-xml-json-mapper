@@ -42,22 +42,24 @@ public class AugmentationManager {
     // checks for node with "view" containing _inputs
     private Node findInputNode(List<Node> ioSubNodes) {
         for (Node node : ioSubNodes) {
-            if (node.getView().contains("_inputs") && !node.getView().contains("_IO")) return node;
+            if (node.getView().contains("_inputs") && !node.getView().contains("_IO"))
+                return node;
         }
         return null;
     }
 
     private Node findOutputNode(List<Node> ioSubNodes) {
         for (Node node : ioSubNodes) {
-            if (node.getView().contains("_outputs") && !node.getView().contains("_IO")) return node;
+            if (node.getView().contains("_outputs") && !node.getView().contains("_IO"))
+                return node;
         }
         return null;
     }
 
-    public void insertInputObjects(Augmentation augmentation, List<Node> objects) {
+    public void insertInputObjects(Augmentation augmentation, List<Node> objects, List<String> viewList) {
         Node inputsMainNode = findInputNode(ioSubNodes);
         List<Node> newInputObjects;
-        if (inputsMainNode != null) {
+        if (inputsMainNode.getNodeList() != null) {
              newInputObjects = Stream.concat(inputsMainNode.getNodeList().stream(), objects.stream()).toList();
         } else {
             newInputObjects = objects;
@@ -67,8 +69,11 @@ public class AugmentationManager {
         targetSubNodes.remove(ioMainNode);
         ioSubNodes.remove(inputsMainNode);
 
-        // add new inputMainNode to the parent list at second to last index
+        // add new inputMainNode to the parent list at second to last index, change main node views
         inputsMainNode.setNodeList(newInputObjects);
+        inputsMainNode.setView(viewList.toString()
+                .replace("[", "")
+                .replace("]", ""));
         ioSubNodes.add(ioSubNodes.size() - 2, inputsMainNode);
 
         // wrap remaining elements to their respective parent nodes
@@ -80,16 +85,16 @@ public class AugmentationManager {
         augmentation.setTargetBase(targetBase);
     }
 
-    public void deleteAllInputObjects(Augmentation augmentation) {
+    public void deleteAllInputObjects() {
         Node inputsMainNode = findInputNode(ioSubNodes);
         inputsMainNode.getNodeList().clear();
     }
 
-    public void insertOutputObjects(Augmentation augmentation, List<Node> objects) {
+    public void insertOutputObjects(List<Node> objects) {
 
     }
 
-    public void deleteAllOutputObjects(Augmentation augmentation) {
+    public void deleteAllOutputObjects() {
         Node outputsMainNode = findOutputNode(ioSubNodes);
     }
 }
