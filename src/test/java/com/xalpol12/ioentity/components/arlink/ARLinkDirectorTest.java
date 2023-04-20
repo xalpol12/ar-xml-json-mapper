@@ -1,8 +1,10 @@
 package com.xalpol12.ioentity.components.arlink;
 
-import com.xalpol12.JAXBParser;
-import com.xalpol12.StringManager;
-import com.xalpol12.xmlentity.Node;
+import com.xalpol12.entity.ioentity.components.arlink.ARLinkBuilder;
+import com.xalpol12.entity.ioentity.components.arlink.ARLinkDirector;
+import com.xalpol12.parser.JAXBParser;
+import com.xalpol12.helper.StringManager;
+import com.xalpol12.entity.xmlentity.Node;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;

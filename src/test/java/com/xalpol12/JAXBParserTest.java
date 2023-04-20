@@ -1,5 +1,7 @@
 package com.xalpol12;
 
+import com.xalpol12.entity.xmlentity.*;
+import com.xalpol12.parser.JAXBParser;
 import com.xalpol12.xmlentity.*;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +10,6 @@ import javax.xml.bind.JAXBException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static com.xalpol12.StringManager.*;
 
 class JAXBParserTest {
 

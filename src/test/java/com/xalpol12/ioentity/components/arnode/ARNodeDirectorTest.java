@@ -1,12 +1,14 @@
 package com.xalpol12.ioentity.components.arnode;
 
-import com.xalpol12.JAXBParser;
-import com.xalpol12.StringManager;
-import com.xalpol12.ioentity.components.arlink2d.ARLink2DBuilder;
-import com.xalpol12.ioentity.components.arlink2d.ARLink2DDirector;
-import com.xalpol12.ioentity.components.artext.ARTextBuilder;
-import com.xalpol12.ioentity.components.artext.ARTextDirector;
-import com.xalpol12.xmlentity.Node;
+import com.xalpol12.entity.ioentity.components.arnode.ARNodeBuilder;
+import com.xalpol12.entity.ioentity.components.arnode.ARNodeDirector;
+import com.xalpol12.parser.JAXBParser;
+import com.xalpol12.helper.StringManager;
+import com.xalpol12.entity.ioentity.components.arlink2d.ARLink2DBuilder;
+import com.xalpol12.entity.ioentity.components.arlink2d.ARLink2DDirector;
+import com.xalpol12.entity.ioentity.components.artext.ARTextBuilder;
+import com.xalpol12.entity.ioentity.components.artext.ARTextDirector;
+import com.xalpol12.entity.xmlentity.Node;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;

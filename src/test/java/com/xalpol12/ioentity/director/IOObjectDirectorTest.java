@@ -1,9 +1,10 @@
 package com.xalpol12.ioentity.director;
 
-import com.xalpol12.JAXBParser;
-import com.xalpol12.StringManager;
-import com.xalpol12.ioentity.builders.IOObjectBuilder;
-import com.xalpol12.xmlentity.Node;
+import com.xalpol12.entity.ioentity.director.IOObjectDirector;
+import com.xalpol12.parser.JAXBParser;
+import com.xalpol12.helper.StringManager;
+import com.xalpol12.entity.ioentity.builders.IOObjectBuilder;
+import com.xalpol12.entity.xmlentity.Node;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;
