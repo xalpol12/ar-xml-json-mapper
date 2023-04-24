@@ -1,8 +1,8 @@
 package com.xalpol12;
 
-public final class FilePathConstants {
+public final class FilePathConstantsTests {
 
-    private FilePathConstants() {} //prevents instantiation
+    private FilePathConstantsTests() {} //prevents instantiation
 
     public static final String ROOT = "src/main/resources/documents/xml/testfiles";
     public static final String DIRECTOR_UNIT_TEST_DIR = ROOT + "/directorunittest";

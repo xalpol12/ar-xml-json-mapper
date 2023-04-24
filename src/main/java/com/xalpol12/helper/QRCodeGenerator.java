@@ -4,39 +4,32 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
-import com.google.zxing.datamatrix.DataMatrixWriter;
 import com.google.zxing.qrcode.QRCodeWriter;
 
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class QRCodeGenerator {
-    private static final Pattern p = Pattern.compile("/([^/]+?)\\.xml");
+    private static final Pattern PATTERN = Pattern.compile("([^\\/]+?)\\.xml");
+    private static final String CURRENT_PATH = Paths.get("").toAbsolutePath().toString();
 
-    public static void WriteQRCodeImage(String qrCodeText) {
-
-        MatrixToImageWriter.writeToPath(bitMatrix, ".jpg", path);
+    public static void writeQRCodeImage(String qrCodeText) throws IOException, WriterException {
+        Path path = Paths.get(CURRENT_PATH, extractTitleFromText(qrCodeText));  // TODO: Change path to user's destination path
+        BitMatrix qrMatrix = generateQRCodeImage(qrCodeText);
+        MatrixToImageWriter.writeToPath(qrMatrix, "png", path);
     }
 
-    private static String ExtractTitleFromText(String qrCodeText) {
-
+    private static String extractTitleFromText(String qrCodeText) {
+        Matcher m = PATTERN.matcher(qrCodeText);
+        String title = m.find()? m.group(1) : null;
+        return title + ".png";
     }
 
-    private static BufferedImage GenerateQRCodeImage(String qrCodeText) throws IOException, WriterException {
-        Matcher m = p.matcher(qrCodeText);
-        String title = m.group(0);
-
-        Path path = Paths.get(title);
-
+    private static BitMatrix generateQRCodeImage(String qrCodeText) throws IOException, WriterException {
         QRCodeWriter barcodeWriter = new QRCodeWriter();
-        BitMatrix bitMatrix =
-                barcodeWriter.encode(qrCodeText, BarcodeFormat.QR_CODE, 200, 200);
-
-        return MatrixToImageWriter.writeToPath(bitMatrix, ".jpg", path);
+        return barcodeWriter.encode(qrCodeText, BarcodeFormat.QR_CODE, 400, 400);
     }
 }

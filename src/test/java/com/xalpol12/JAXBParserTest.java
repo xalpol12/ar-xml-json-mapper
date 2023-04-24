@@ -2,7 +2,6 @@ package com.xalpol12;
 
 import com.xalpol12.entity.xmlentity.*;
 import com.xalpol12.parser.JAXBParser;
-import com.xalpol12.xmlentity.*;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;
@@ -131,7 +130,7 @@ class JAXBParserTest {
         WebSocket webSocket = createWebSocket();
 
         //when
-        WebSocket parsedWebSocket = JAXBParser.unmarshall(TEST_WEBSOCKET, WebSocket.class);
+        WebSocket parsedWebSocket = JAXBParser.unmarshall(FilePathConstantsTests.TEST_WEBSOCKET, WebSocket.class);
 
         //then
         System.out.println(parsedWebSocket.toString());
@@ -145,7 +144,7 @@ class JAXBParserTest {
         valueServer.setWebsocket(createWebSocket());
 
         //when
-        ValueServer parsedValueServer = JAXBParser.unmarshall(TEST_VALUESERVER, ValueServer.class);
+        ValueServer parsedValueServer = JAXBParser.unmarshall(FilePathConstantsTests.TEST_VALUESERVER, ValueServer.class);
 
         //then
         System.out.println(parsedValueServer.toString());
@@ -158,7 +157,7 @@ class JAXBParserTest {
         ValueServer valueServer = createValueServer();
 
         //when
-        ValueServer parsedValueServer = JAXBParser.unmarshall(TEST_VALUESERVER_EMPTYELEMENT, ValueServer.class);
+        ValueServer parsedValueServer = JAXBParser.unmarshall(FilePathConstantsTests.TEST_VALUESERVER_EMPTYELEMENT, ValueServer.class);
 
         //then
         System.out.println(parsedValueServer.toString());
@@ -172,7 +171,7 @@ class JAXBParserTest {
         link.setRgb("FFFFFF");
 
         //when
-        Link parsedLink = JAXBParser.unmarshall(TEST_LINK, Link.class);
+        Link parsedLink = JAXBParser.unmarshall(FilePathConstantsTests.TEST_LINK, Link.class);
 
         //then
         System.out.println(parsedLink.toString());
@@ -185,7 +184,7 @@ class JAXBParserTest {
         Link link = createLink();
 
         //when
-        Link parsedLink = JAXBParser.unmarshall(TEST_LINK_EMPTYRGB, Link.class);
+        Link parsedLink = JAXBParser.unmarshall(FilePathConstantsTests.TEST_LINK_EMPTYRGB, Link.class);
 
         //then
         System.out.println(parsedLink.toString());
@@ -199,7 +198,7 @@ class JAXBParserTest {
         model.setLink(createLink());
 
         //when
-        Model parsedModel = JAXBParser.unmarshall(TEST_MODEL, Model.class);
+        Model parsedModel = JAXBParser.unmarshall(FilePathConstantsTests.TEST_MODEL, Model.class);
 
         //then
         System.out.println(parsedModel.toString());
@@ -213,7 +212,7 @@ class JAXBParserTest {
         model.setTint("#B6BEC6");
 
         //when
-        Model parsedModel = JAXBParser.unmarshall(TEST_MODEL_EMPTYELEMENT, Model.class);
+        Model parsedModel = JAXBParser.unmarshall(FilePathConstantsTests.TEST_MODEL_EMPTYELEMENT, Model.class);
 
         //then
         System.out.println(parsedModel.toString());
@@ -226,7 +225,7 @@ class JAXBParserTest {
         Text text = createText();
 
         //when
-        Text parsedText = JAXBParser.unmarshall(TEST_TEXT, Text.class);
+        Text parsedText = JAXBParser.unmarshall(FilePathConstantsTests.TEST_TEXT, Text.class);
 
         //then
         System.out.println(parsedText.toString());
@@ -239,7 +238,7 @@ class JAXBParserTest {
         Transmit transmit = createTransmit();
 
         //when
-        Transmit parsedTransmit = JAXBParser.unmarshall(TEST_TRANSMIT, Transmit.class);
+        Transmit parsedTransmit = JAXBParser.unmarshall(FilePathConstantsTests.TEST_TRANSMIT, Transmit.class);
 
         //then
         System.out.println(parsedTransmit.toString());
@@ -252,7 +251,7 @@ class JAXBParserTest {
         Switch aSwitch = createSwitch();
 
         //when
-        Switch parsedSwitch = JAXBParser.unmarshall(TEST_SWITCH, Switch.class);
+        Switch parsedSwitch = JAXBParser.unmarshall(FilePathConstantsTests.TEST_SWITCH, Switch.class);
 
         //then
         System.out.println(parsedSwitch.toString());
@@ -265,7 +264,7 @@ class JAXBParserTest {
         KeyFrame keyFrame = new KeyFrame(1, 1.5, "linear");
 
         //when
-        KeyFrame parsedKeyFrame = JAXBParser.unmarshall(TEST_KEYFRAME, KeyFrame.class);
+        KeyFrame parsedKeyFrame = JAXBParser.unmarshall(FilePathConstantsTests.TEST_KEYFRAME, KeyFrame.class);
 
         //then
         System.out.println(parsedKeyFrame.toString());
@@ -278,7 +277,7 @@ class JAXBParserTest {
         Animation animation = createAnimation();
 
         //when
-        Animation parsedAnimation = JAXBParser.unmarshall(TEST_ANIMATION, Animation.class);
+        Animation parsedAnimation = JAXBParser.unmarshall(FilePathConstantsTests.TEST_ANIMATION, Animation.class);
 
         //then
         System.out.println(parsedAnimation.toString());
@@ -292,7 +291,7 @@ class JAXBParserTest {
         target.setNode(createNode());
 
         //when
-        Target parsedTarget = JAXBParser.unmarshall(TEST_TARGET, Target.class);
+        Target parsedTarget = JAXBParser.unmarshall(FilePathConstantsTests.TEST_TARGET, Target.class);
 
         //then
         System.out.println(parsedTarget.toString());
@@ -305,7 +304,7 @@ class JAXBParserTest {
         TargetBase targetBase = createTargetBase();
 
         //when
-        TargetBase parsedTargetBase = JAXBParser.unmarshall(TEST_TARGETBASE, TargetBase.class);
+        TargetBase parsedTargetBase = JAXBParser.unmarshall(FilePathConstantsTests.TEST_TARGETBASE, TargetBase.class);
 
         //then
         System.out.println(parsedTargetBase.toString());
@@ -318,7 +317,7 @@ class JAXBParserTest {
         Camera camera = createCamera();
 
         //when
-        Camera parsedCamera = JAXBParser.unmarshall(TEST_CAMERA, Camera.class);
+        Camera parsedCamera = JAXBParser.unmarshall(FilePathConstantsTests.TEST_CAMERA, Camera.class);
 
         //then
         System.out.println(parsedCamera.toString());

@@ -1,5 +1,6 @@
 package com.xalpol12.ioentity.components.arnode;
 
+import com.xalpol12.FilePathConstantsTests;
 import com.xalpol12.entity.ioentity.components.arnode.ARNodeBuilder;
 import com.xalpol12.entity.ioentity.components.arnode.ARNodeDirector;
 import com.xalpol12.parser.JAXBParser;
@@ -17,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ARNodeDirectorTest {
 
-    private static final String AR_DETAILS = FilePathConstants.DIRECTOR_INTEGRATION_TEST_DIR + "/details.xml";
+    private static final String AR_DETAILS = FilePathConstantsTests.DIRECTOR_INTEGRATION_TEST_DIR + "/details.xml";
     @Test
     void givenDetailsFromFile_whenCreateDetailsUsingBuilder_thenObjectsAreEqual() throws JAXBException {
         //given

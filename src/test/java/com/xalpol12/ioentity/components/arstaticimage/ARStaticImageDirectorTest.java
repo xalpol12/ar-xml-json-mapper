@@ -1,5 +1,6 @@
 package com.xalpol12.ioentity.components.arstaticimage;
 
+import com.xalpol12.FilePathConstantsTests;
 import com.xalpol12.entity.ioentity.components.arstaticimage.ARStaticImageBuilder;
 import com.xalpol12.entity.ioentity.components.arstaticimage.ARStaticImageDirector;
 import com.xalpol12.parser.JAXBParser;
@@ -12,7 +13,7 @@ import javax.xml.bind.JAXBException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ARStaticImageDirectorTest {
-    private static final String AR_STATIC_IMAGE = FilePathConstants.DIRECTOR_UNIT_TEST_DIR + "/staticimage.xml";
+    private static final String AR_STATIC_IMAGE = FilePathConstantsTests.DIRECTOR_UNIT_TEST_DIR + "/staticimage.xml";
     @Test
     void givenInactiveFromFile_whenCreateInactiveUsingBuilder_thenObjectsAreEqual() throws JAXBException {
         //given

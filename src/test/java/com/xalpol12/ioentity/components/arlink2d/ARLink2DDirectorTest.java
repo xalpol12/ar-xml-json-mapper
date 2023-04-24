@@ -1,5 +1,6 @@
 package com.xalpol12.ioentity.components.arlink2d;
 
+import com.xalpol12.FilePathConstantsTests;
 import com.xalpol12.entity.ioentity.components.arlink2d.ARLink2DBuilder;
 import com.xalpol12.entity.ioentity.components.arlink2d.ARLink2DDirector;
 import com.xalpol12.parser.JAXBParser;
@@ -12,7 +13,7 @@ import javax.xml.bind.JAXBException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ARLink2DDirectorTest {
-    private static final String AR_DATASHEET = FilePathConstants.DIRECTOR_UNIT_TEST_DIR + "/datasheet.xml";
+    private static final String AR_DATASHEET = FilePathConstantsTests.DIRECTOR_UNIT_TEST_DIR + "/datasheet.xml";
     @Test
     void givenDatasheetFromFile_whenCreateDatasheetUsingBuilder_thenObjectsAreEqual() throws JAXBException {
         //given

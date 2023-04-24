@@ -1,5 +1,6 @@
 package com.xalpol12.ioentity.components.artext;
 
+import com.xalpol12.FilePathConstantsTests;
 import com.xalpol12.entity.ioentity.components.artext.ARTextBuilder;
 import com.xalpol12.entity.ioentity.components.artext.ARTextDirector;
 import com.xalpol12.parser.JAXBParser;
@@ -12,8 +13,8 @@ import javax.xml.bind.JAXBException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ARTextDirectorTest {
-    private static final String AR_TEXT = FilePathConstants.DIRECTOR_UNIT_TEST_DIR + "/text.xml";
-    private static final String AR_MENU_NAME = FilePathConstants.DIRECTOR_UNIT_TEST_DIR + "/menuname.xml";
+    private static final String AR_TEXT = FilePathConstantsTests.DIRECTOR_UNIT_TEST_DIR + "/text.xml";
+    private static final String AR_MENU_NAME = FilePathConstantsTests.DIRECTOR_UNIT_TEST_DIR + "/menuname.xml";
 
     @Test
     void givenTextNodeFromFile_whenCreateTextNodeUsingBuilder_thenObjectsAreEqual() throws JAXBException {
