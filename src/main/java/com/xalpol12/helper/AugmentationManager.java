@@ -26,41 +26,11 @@ public class AugmentationManager {
         ioSubNodes = Objects.requireNonNull(ioMainNode).getNodeList();
     }
 
-    // checks for first non-zero indexed node with empty "view", "collapse" and "show" - it is important
-    // to maintain order of nodes between parsings
-    private Node findIONode(List<Node> nodes) {
-        for (Node node : nodes) {
-            if (node.getView().equals("") && node.getCollapse().equals("")
-                    && node.getShow().equals("") && node.getTx() == null
-                    && nodes.indexOf(node) != 0) {
-                return node;
-            }
-        }
-        return null;
-    }
-
-    // checks for node with "view" containing _inputs
-    private Node findInputNode(List<Node> ioSubNodes) {
-        for (Node node : ioSubNodes) {
-            if (node.getView().contains("_inputs") && !node.getView().contains("_IO"))
-                return node;
-        }
-        return null;
-    }
-
-    private Node findOutputNode(List<Node> ioSubNodes) {
-        for (Node node : ioSubNodes) {
-            if (node.getView().contains("_outputs") && !node.getView().contains("_IO"))
-                return node;
-        }
-        return null;
-    }
-
     public void insertInputObjects(Augmentation augmentation, List<Node> objects, List<String> viewList) {
         Node inputsMainNode = findInputNode(ioSubNodes);
         List<Node> newInputObjects;
         if (inputsMainNode.getNodeList() != null) {
-             newInputObjects = Stream.concat(inputsMainNode.getNodeList().stream(), objects.stream()).toList();
+            newInputObjects = Stream.concat(inputsMainNode.getNodeList().stream(), objects.stream()).toList();
         } else {
             newInputObjects = objects;
         }
@@ -85,6 +55,7 @@ public class AugmentationManager {
         augmentation.setTargetBase(targetBase);
     }
 
+
     public void deleteAllInputObjects() {
         Node inputsMainNode = findInputNode(ioSubNodes);
         inputsMainNode.getNodeList().clear();
@@ -95,5 +66,35 @@ public class AugmentationManager {
 
     public void deleteAllOutputObjects() {
         Node outputsMainNode = findOutputNode(ioSubNodes);
+    }
+
+    // checks for first non-zero indexed node with empty "view", "collapse" and "show" - it is important
+    // to maintain order of nodes between parsings
+    private Node findIONode(List<Node> nodes) {
+        for (Node node : nodes) {
+            if (node.getView().equals("") && node.getCollapse().equals("")
+                    && node.getShow().equals("") && node.getTx() == null
+                    && nodes.indexOf(node) != 0) {
+                return node;
+            }
+        }
+        return null;
+    }
+    // checks for node with "view" containing _inputs
+
+    private Node findInputNode(List<Node> ioSubNodes) {
+        for (Node node : ioSubNodes) {
+            if (node.getView().contains("_inputs") && !node.getView().contains("_IO"))
+                return node;
+        }
+        return null;
+    }
+
+    private Node findOutputNode(List<Node> ioSubNodes) {
+        for (Node node : ioSubNodes) {
+            if (node.getView().contains("_outputs") && !node.getView().contains("_IO"))
+                return node;
+        }
+        return null;
     }
 }
