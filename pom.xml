@@ -57,6 +57,21 @@
             <version>2.14.2</version>
         </dependency>
 
+        <!-- QR GENERATOR-->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+
+        <!-- QR GENERATOR-->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>

@@ -1,10 +1,8 @@
 package com.xalpol12;
 
-import javax.print.DocFlavor;
+public final class FilePathConstants {
 
-public final class StringManager {
-
-    private StringManager() {} //prevents instantiation
+    private FilePathConstants() {} //prevents instantiation
 
     public static final String ROOT = "src/main/resources/documents/xml/testfiles";
     public static final String DIRECTOR_UNIT_TEST_DIR = ROOT + "/directorunittest";

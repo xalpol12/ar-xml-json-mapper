@@ -61,14 +61,14 @@ public class IOObjectBuilder implements IOBuilder{
                 .replace("[", "")
                 .replace("]", "");
 
-        collapse = "";  // TODO: create setter for this attribute
+        collapse = "";
         show = "";
 
         if (view.contains(label.toLowerCase())) {
             viewExcludingObject = view.remove(view.indexOf(label.toLowerCase()));
         } else viewExcludingObject = this.view;
 
-        objectView = "joining_" + label.toLowerCase() + "Details_i"; // TODO: Add enum type for different workstations
+        objectView = "joining_" + label.toLowerCase() + "Details_i";
         objectRefer = "@view:" + objectView;
 
         mainNode = new Node();

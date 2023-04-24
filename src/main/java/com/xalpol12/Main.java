@@ -15,6 +15,8 @@ public class Main {
         Augmentation aug = SceneToAugmentationCreator.createAugmentation(
                 StringManager.JSON_FILE_PATH,
                 StringManager.XML_JOINING_FILE_PATH);
-        JAXBParser.marshall(aug, "testFileFromJSON.xml");
+        JAXBParser.marshall(aug, "testFileFromJSONPrefixAndTransmitterChanged.xml");
+//        Augmentation aug = JAXBParser.unmarshall("Joining_01.xml", Augmentation.class);
+//        JAXBParser.marshall(aug, "Joining_01_parsed.xml");
     }
 }

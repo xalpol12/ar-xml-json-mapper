@@ -91,7 +91,6 @@ public class AugmentationManager {
     }
 
     public void insertOutputObjects(List<Node> objects) {
-
     }
 
     public void deleteAllOutputObjects() {
