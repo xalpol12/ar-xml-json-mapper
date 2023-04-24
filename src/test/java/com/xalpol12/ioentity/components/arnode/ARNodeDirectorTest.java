@@ -3,7 +3,7 @@ package com.xalpol12.ioentity.components.arnode;
 import com.xalpol12.entity.ioentity.components.arnode.ARNodeBuilder;
 import com.xalpol12.entity.ioentity.components.arnode.ARNodeDirector;
 import com.xalpol12.parser.JAXBParser;
-import com.xalpol12.helper.StringManager;
+import com.xalpol12.helper.FilePathConstants;
 import com.xalpol12.entity.ioentity.components.arlink2d.ARLink2DBuilder;
 import com.xalpol12.entity.ioentity.components.arlink2d.ARLink2DDirector;
 import com.xalpol12.entity.ioentity.components.artext.ARTextBuilder;
@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ARNodeDirectorTest {
 
-    private static final String AR_DETAILS = StringManager.DIRECTOR_INTEGRATION_TEST_DIR + "/details.xml";
+    private static final String AR_DETAILS = FilePathConstants.DIRECTOR_INTEGRATION_TEST_DIR + "/details.xml";
     @Test
     void givenDetailsFromFile_whenCreateDetailsUsingBuilder_thenObjectsAreEqual() throws JAXBException {
         //given

@@ -2,7 +2,7 @@ package com.xalpol12.ioentity.director;
 
 import com.xalpol12.entity.ioentity.director.IOObjectDirector;
 import com.xalpol12.parser.JAXBParser;
-import com.xalpol12.helper.StringManager;
+import com.xalpol12.helper.FilePathConstants;
 import com.xalpol12.entity.ioentity.builders.IOObjectBuilder;
 import com.xalpol12.entity.xmlentity.Node;
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,7 @@ class IOObjectDirectorTest {
     @Test
     void givenObjectLoadedFromXML_whenCreateObject_thenObjectsAreEqual() throws JAXBException {
         //given
-        String OBJECT_PATH = StringManager.ROOT + "/objectdirectortest/g1bg1node.xml";
+        String OBJECT_PATH = FilePathConstants.ROOT + "/objectdirectortest/g1bg1node.xml";
         Node object = JAXBParser.unmarshall(OBJECT_PATH, Node.class);
         String view = "joining_inputs,joining_g1bg1Details_i,joining_g1bg2Details_i," +
                 "joining_g1bg3Details_i,joining_g1bg4Details_i,joining_g2bg1Details_i," +

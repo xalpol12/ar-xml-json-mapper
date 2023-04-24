@@ -1,12 +1,9 @@
 package com.xalpol12.helper;
 
-import java.util.HashSet;
-import java.util.List;
+public final class FilePathConstants {
+    private FilePathConstants() {} //prevents instantiation
+    private static final String RESOURCES_PATH =  "src/main/resources";
+    public static final String XML_JOINING_FILE_PATH = RESOURCES_PATH + "/documents/xml/Joining_01.xml";
+    public static final String JSON_FILE_PATH = RESOURCES_PATH + "/documents/json/imports/my_scene.json";
 
-public class FilePathConstants {
-    public static boolean compareTwoStrings(String str1, String str2, String separator) {
-        HashSet<String> wordList1  = new HashSet<String>(List.of(str1.split(separator)));
-        HashSet<String> wordList2  = new HashSet<String>(List.of(str2.split(separator)));
-        return wordList1.containsAll(wordList2) && wordList2.containsAll(wordList1);
-    }
 }

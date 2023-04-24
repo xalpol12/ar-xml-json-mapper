@@ -15,20 +15,6 @@ import java.io.StringWriter;
 
 public class JAXBParser {
 
-    private static Transformer getConfiguredTransformer() throws TransformerConfigurationException {
-        Transformer transformer = TransformerFactory.newInstance().newTransformer();
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-        return transformer;
-    }
-
-    private static Marshaller getConfiguredMarshaller() throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Augmentation.class);
-        Marshaller marshaller = jaxbContext.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
-        return marshaller;
-    }
-
     public static <T> T unmarshall(String fileName, Class<T> type) throws JAXBException {
         File file = FileHandler.getFile(fileName);
         JAXBContext context = JAXBContext.newInstance(type);
@@ -41,5 +27,19 @@ public class JAXBParser {
         StringWriter stringWriter = new StringWriter();
         marshaller.marshal(node, stringWriter); // TODO: Check if filename ends with .xml
         transformer.transform(new StreamSource(new StringReader(stringWriter.toString())), new StreamResult(new File(newFileName)));
+    }
+
+    private static Transformer getConfiguredTransformer() throws TransformerConfigurationException {
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+        return transformer;
+    }
+
+    private static Marshaller getConfiguredMarshaller() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(Augmentation.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
+        return marshaller;
     }
 }

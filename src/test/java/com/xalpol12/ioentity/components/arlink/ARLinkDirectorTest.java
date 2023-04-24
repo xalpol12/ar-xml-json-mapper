@@ -3,7 +3,7 @@ package com.xalpol12.ioentity.components.arlink;
 import com.xalpol12.entity.ioentity.components.arlink.ARLinkBuilder;
 import com.xalpol12.entity.ioentity.components.arlink.ARLinkDirector;
 import com.xalpol12.parser.JAXBParser;
-import com.xalpol12.helper.StringManager;
+import com.xalpol12.helper.FilePathConstants;
 import com.xalpol12.entity.xmlentity.Node;
 import org.junit.jupiter.api.Test;
 
@@ -12,8 +12,8 @@ import javax.xml.bind.JAXBException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ARLinkDirectorTest {
-    private static final String ACTIVE_LINK = StringManager.DIRECTOR_UNIT_TEST_DIR + "/activelink.xml";
-    private static final String OPEN_DETAILS = StringManager.DIRECTOR_UNIT_TEST_DIR + "/opendetails.xml";
+    private static final String ACTIVE_LINK = FilePathConstants.DIRECTOR_UNIT_TEST_DIR + "/activelink.xml";
+    private static final String OPEN_DETAILS = FilePathConstants.DIRECTOR_UNIT_TEST_DIR + "/opendetails.xml";
 
     @Test
     void givenActiveLinkFromFile_whenCreateActiveLinkUsingBuilder_thenObjectsAreEqual() throws JAXBException {

@@ -8,8 +8,6 @@ import java.io.File;
 import java.io.IOException;
 
 public class JSONParser {
-
-
     public static Scene parse(String fileName) throws IOException {
         File file = FileHandler.getFile(fileName);
         ObjectMapper objectMapper = new ObjectMapper();

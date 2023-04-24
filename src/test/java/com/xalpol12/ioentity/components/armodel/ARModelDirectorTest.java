@@ -3,7 +3,7 @@ package com.xalpol12.ioentity.components.armodel;
 import com.xalpol12.entity.ioentity.components.armodel.ARModelBuilder;
 import com.xalpol12.entity.ioentity.components.armodel.ARModelDirector;
 import com.xalpol12.parser.JAXBParser;
-import com.xalpol12.helper.StringManager;
+import com.xalpol12.helper.FilePathConstants;
 import com.xalpol12.entity.xmlentity.Node;
 import org.junit.jupiter.api.Test;
 
@@ -13,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ARModelDirectorTest {
 
-    private static final String AR_INACTIVE = StringManager.DIRECTOR_UNIT_TEST_DIR + "/inactive.xml";
-    private static final String AR_ACTIVE = StringManager.DIRECTOR_UNIT_TEST_DIR + "/active.xml";
+    private static final String AR_INACTIVE = FilePathConstants.DIRECTOR_UNIT_TEST_DIR + "/inactive.xml";
+    private static final String AR_ACTIVE = FilePathConstants.DIRECTOR_UNIT_TEST_DIR + "/active.xml";
 
     @Test
     void givenInactiveFromFile_whenCreateInactiveUsingBuilder_thenObjectsAreEqual() throws JAXBException {
