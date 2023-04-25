@@ -17,15 +17,15 @@ public class SceneToAugmentationCreator {
 
     public static Augmentation createAugmentation(String jsonFilePath, String xmlFilePath) throws IOException, JAXBException {
         Scene scene = readJSON(jsonFilePath);
-        List<JSONObject> jsonObjects = scene.objects();
+        List<JSONObject> jsonObjects = scene.objects();                            // Unwrap JSON scene object
 
         List<Node> inputObjects = createIOObjects(jsonObjects);
 
-        Augmentation aug = JAXBParser.unmarshall(xmlFilePath, Augmentation.class);
+        Augmentation aug = JAXBParser.unmarshall(xmlFilePath, Augmentation.class); // Create augmentation based on Joining_01.xml file
         AugmentationManager augManager = new AugmentationManager(aug);
 
-        augManager.deleteAllInputObjects();
-        augManager.insertInputObjects(aug, inputObjects, scene.viewList());
+        augManager.deleteAllInputObjects();                                     // Delete all currently added objects
+        augManager.insertInputObjects(aug, inputObjects, scene.viewList());     // Insert user objects
         return aug;
     }
 

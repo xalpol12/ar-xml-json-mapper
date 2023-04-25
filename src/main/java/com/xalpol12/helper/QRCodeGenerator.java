@@ -7,6 +7,7 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.regex.Matcher;
@@ -14,11 +15,14 @@ import java.util.regex.Pattern;
 
 public class QRCodeGenerator {
     private static final Pattern PATTERN = Pattern.compile("([^\\/]+?)\\.xml");
-    private static final String CURRENT_PATH = Paths.get("").toAbsolutePath().toString();
+    private static final String FESTO_QR_PATH = """
+            http://mes-pc.festo.systems/factory/apps/ar/scenes/MPS400/
+            """;
 
-    public static void writeQRCodeImage(String qrCodeText) throws IOException, WriterException {
-        Path path = Paths.get(CURRENT_PATH, extractTitleFromText(qrCodeText));  // TODO: Change path to user's destination path
-        BitMatrix qrMatrix = generateQRCodeImage(qrCodeText);
+    public static void writeQRCodeImage(String fileName, String saveLocation) throws IOException, WriterException {
+        BitMatrix qrMatrix = generateQRCodeImage(FESTO_QR_PATH + fileName);
+        Files.createDirectories(Paths.get(saveLocation, "QRCodes"));        // creates directory QRCodes if one does not exist
+        Path path = Paths.get(saveLocation, "QRCodes", extractTitleFromText(fileName));
         MatrixToImageWriter.writeToPath(qrMatrix, "png", path);
     }
 

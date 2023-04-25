@@ -15,15 +15,14 @@ class QRCodeGeneratorTest {
     @Test
     void givenText_whenWriteQRCodeImage_thenFileExists() throws IOException, WriterException {
         // given
-        String qrCodeText = """
-                http://mes-pc.festo.systems/factory/apps/ar/scenes/MPS400/Joining_01.xml 
-                """;
-        Path filePath = Paths.get(Paths.get("").toAbsolutePath().toString(),"Joining_01.png");
-
+        String fileName = "Joining_01.xml";
+        String fileDirectory = Paths.get(Paths.get("").toAbsolutePath().toString()).toString();
+        Path completePath = Paths.get(fileDirectory, "QRCodes", "Joining_01.png");
+//        "Joining_01.png"
         // when
-        QRCodeGenerator.writeQRCodeImage(qrCodeText);
+        QRCodeGenerator.writeQRCodeImage(fileName, fileDirectory);
 
         // then
-        assertTrue(Files.exists(filePath));
+        assertTrue(Files.exists(completePath));
     }
 }
