@@ -61,13 +61,6 @@ public class AugmentationManager {
         inputsMainNode.getNodeList().clear();
     }
 
-    public void insertOutputObjects(List<Node> objects) {
-    }
-
-    public void deleteAllOutputObjects() {
-        Node outputsMainNode = findOutputNode(ioSubNodes);
-    }
-
     // checks for first non-zero indexed node with empty "view", "collapse" and "show" - it is important
     // to maintain order of nodes between parsings
     private Node findIONode(List<Node> nodes) {
@@ -80,8 +73,8 @@ public class AugmentationManager {
         }
         return null;
     }
-    // checks for node with "view" containing _inputs
 
+    // checks for node with "view" containing _inputs
     private Node findInputNode(List<Node> ioSubNodes) {
         for (Node node : ioSubNodes) {
             if (node.getView().contains("_inputs") && !node.getView().contains("_IO"))
@@ -90,11 +83,4 @@ public class AugmentationManager {
         return null;
     }
 
-    private Node findOutputNode(List<Node> ioSubNodes) {
-        for (Node node : ioSubNodes) {
-            if (node.getView().contains("_outputs") && !node.getView().contains("_IO"))
-                return node;
-        }
-        return null;
-    }
 }

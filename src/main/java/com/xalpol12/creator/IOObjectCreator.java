@@ -1,9 +1,8 @@
 package com.xalpol12.creator;
 
-import com.xalpol12.entity.ioentity.builders.IOObjectBuilder;
-import com.xalpol12.entity.ioentity.director.IOObjectDirector;
+import com.xalpol12.entity.ioentity.IOObjectBuilder;
+import com.xalpol12.entity.ioentity.IOObjectDirector;
 import com.xalpol12.entity.jsonentity.JSONObject;
-import com.xalpol12.entity.jsonentity.Vector3;
 import com.xalpol12.entity.xmlentity.Node;
 
 public class IOObjectCreator {

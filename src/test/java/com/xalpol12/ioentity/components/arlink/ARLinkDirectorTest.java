@@ -12,7 +12,7 @@ import javax.xml.bind.JAXBException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ARLinkDirectorTest {
-    private static final String ACTIVE_LINK = FilePathConstantsTests.DIRECTOR_INTEGRATION_TEST_DIR + "/activelink.xml";
+    private static final String ACTIVE_LINK = FilePathConstantsTests.DIRECTOR_UNIT_TEST_DIR + "/activelink.xml";
     private static final String OPEN_DETAILS = FilePathConstantsTests.DIRECTOR_UNIT_TEST_DIR + "/opendetails.xml";
 
     @Test

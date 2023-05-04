@@ -1,4 +1,4 @@
-package com.xalpol12.entity.ioentity.builders;
+package com.xalpol12.entity.ioentity;
 
 import com.xalpol12.entity.ioentity.components.arnode.ARNodeBuilder;
 import com.xalpol12.entity.ioentity.components.arnode.ARNodeDirector;
@@ -18,7 +18,7 @@ import com.xalpol12.entity.xmlentity.Node;
 
 import java.util.List;
 
-public class IOObjectBuilder implements IOBuilder{
+public class IOObjectBuilder {
     private final Float tx;
     private final Float ty;
     private final Float tz;
@@ -74,7 +74,6 @@ public class IOObjectBuilder implements IOBuilder{
         mainNode = new Node();
     }
 
-    @Override
     public void setOpenDetails() {
         ARLinkBuilder builder = new ARLinkBuilder(viewExcludingObject, objectRefer);
         ARLinkDirector director = new ARLinkDirector();
@@ -82,7 +81,6 @@ public class IOObjectBuilder implements IOBuilder{
         openDetails = builder.getComponent();
     }
 
-    @Override
     public void setText() {
         ARTextBuilder builder = new ARTextBuilder(viewExcludingObject, label); // TODO: view without current object
         ARTextDirector director =  new ARTextDirector();
@@ -90,7 +88,6 @@ public class IOObjectBuilder implements IOBuilder{
         arText = builder.getComponent();
     }
 
-    @Override
     public void setStaticImage() {
         ARStaticImageBuilder builder = new ARStaticImageBuilder(view);
         ARStaticImageDirector director = new ARStaticImageDirector();
@@ -112,7 +109,6 @@ public class IOObjectBuilder implements IOBuilder{
         return builder.getComponent();
     }
 
-    @Override
     public void setDetails() {
         Node menuName = setMenuName();
         Node datasheet = setDatasheet();
@@ -122,7 +118,6 @@ public class IOObjectBuilder implements IOBuilder{
         details = builder.getComponent();
     }
 
-    @Override
     public void setActiveLink() {
         String refer = "@view:joining_inputs"; // TODO: dynamically create refer variables
         ARLinkBuilder builder = new ARLinkBuilder(objectView, refer);
@@ -145,7 +140,6 @@ public class IOObjectBuilder implements IOBuilder{
         return builder.getComponent();
     }
 
-    @Override
     public void setWireframe() {
         Node inactive = setInactive();
         Node active = setActive();
@@ -155,7 +149,6 @@ public class IOObjectBuilder implements IOBuilder{
         wireframe = builder.getComponent();
     }
 
-    @Override
     public void setMainNode() {
         mainNode.setTx(tx);
         mainNode.setTy(ty);
@@ -165,7 +158,6 @@ public class IOObjectBuilder implements IOBuilder{
         mainNode.setShow(show);
     }
 
-    @Override
     public Node getObject() {
         return new ARNode(mainNode, List.of(openDetails, arText,
                 staticImage, details, activeLink, wireframe)).getMainNode();

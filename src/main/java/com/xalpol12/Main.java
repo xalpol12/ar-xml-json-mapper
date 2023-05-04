@@ -24,9 +24,5 @@ public class Main {
             JAXBParser.marshall(aug, saveLocation + File.separator + title);
             QRCodeGenerator.writeQRCodeImage(title, saveLocation);
         }
-//        Augmentation aug = SceneToAugmentationCreator.createAugmentation(
-//                FilePathConstants.JSON_FILE_PATH,
-//                FilePathConstants.XML_JOINING_FILE_PATH);
-//        JAXBParser.marshall(aug, "testFileFromJSONPrefixAndTransmitterChanged.xml");
     }
 }

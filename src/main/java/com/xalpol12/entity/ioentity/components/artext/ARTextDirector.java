@@ -6,7 +6,6 @@ public class ARTextDirector {
         builder.setCollapse("");
         builder.setShow("");
         builder.setWidth(100);
-
     }
 
     public void constructTextNode(ARTextBuilder builder) {
