@@ -1,5 +1,6 @@
 package com.xalpol12.verifier;
 
+import com.xalpol12.FilePathConstantsTests;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;
@@ -50,7 +51,7 @@ class PathVerifierTest {
     @Test
     void givenExistingJSONFile_returnsTrue() {
         //given
-        String relativePath = "src\\main\\resources\\documents\\xml\\testfiles\\pathverifier\\test.json";
+        String relativePath = FilePathConstantsTests.ROOT + "/pathverifier/test.json";
         String absPath = Paths.get(relativePath).toAbsolutePath().toString();
 
         //when
