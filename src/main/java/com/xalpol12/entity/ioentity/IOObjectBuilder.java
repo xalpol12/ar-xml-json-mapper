@@ -29,6 +29,7 @@ public class IOObjectBuilder {
     private final Float sy;
     private final Float sz;
     private final String label;
+    private final String url;
     private final String view;
     private final String objectView;
     private final String viewExcludingObject;
@@ -43,7 +44,7 @@ public class IOObjectBuilder {
     private Node wireframe;
     private Node mainNode;
 
-    public IOObjectBuilder(Vector3 position, Vector3 rotation, Vector3 scale, String label, List<String> view) {
+    public IOObjectBuilder(Vector3 position, Vector3 rotation, Vector3 scale, String label, String url, List<String> view) {
         this.tx = position.x();
         this.ty = position.y();
         this.tz = position.z();
@@ -55,6 +56,8 @@ public class IOObjectBuilder {
         this.sx = scale.x();
         this.sy = scale.y();
         this.sz = scale.z();
+
+        this.url = url;
 
         this.label = label.toUpperCase();
         this.view = view.toString()
@@ -103,7 +106,7 @@ public class IOObjectBuilder {
     }
 
     private Node setDatasheet() {
-        ARLink2DBuilder builder = new ARLink2DBuilder(objectView);
+        ARLink2DBuilder builder = new ARLink2DBuilder(objectView, url);
         ARLink2DDirector director = new ARLink2DDirector();
         director.constructDatasheet(builder);
         return builder.getComponent();
