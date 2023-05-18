@@ -17,9 +17,9 @@ import java.io.IOException;
 public class JXAR {
     /*  Serves as an adapter between generated json files
     *   and required by Festo Didactic AR App xml station files.
-    *   Creates xml file and qr code for every supplied json file.
+    *   Generates xml file and qr code for every supplied json file.
     *
-    *   @param  first argument    an absolute path for save location
+    *   @param  first argument    an absolute save location path
     *   @param  next arguments    absolute path to json files, at least one is required
     * */
     public static void main(String... args) throws JAXBException, TransformerException, IOException, WriterException {
