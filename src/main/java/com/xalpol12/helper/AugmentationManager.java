@@ -28,22 +28,7 @@ public class AugmentationManager {
 
     public void insertInputObjects(Augmentation augmentation, List<Node> objects, List<String> viewList) {
         Node inputsMainNode = findInputNode(ioSubNodes);
-        List<Node> newInputObjects;
-        if (inputsMainNode.getNodeList() != null) {
-            newInputObjects = Stream.concat(inputsMainNode.getNodeList().stream(), objects.stream()).toList();
-        } else {
-            newInputObjects = objects;
-        }
-
-        // prevents node duplication upon insertion
-        targetSubNodes.remove(ioMainNode);
-        ioSubNodes.remove(inputsMainNode);
-
-        // add new inputMainNode to the parent list at second to last index, change main node views
-        inputsMainNode.setNodeList(newInputObjects);
-        inputsMainNode.setView(viewList.toString()
-                .replace("[", "")
-                .replace("]", ""));
+        replaceNodeContent(objects, viewList, inputsMainNode);
         ioSubNodes.add(ioSubNodes.size() - 2, inputsMainNode);
 
         // wrap remaining elements to their respective parent nodes
@@ -55,10 +40,45 @@ public class AugmentationManager {
         augmentation.setTargetBase(targetBase);
     }
 
-
     public void deleteAllInputObjects() {
         Node inputsMainNode = findInputNode(ioSubNodes);
         inputsMainNode.getNodeList().clear();
+    }
+
+    public void insertOutputObjects(Augmentation augmentation, List<Node> objects, List<String> viewList) {
+        Node outputsMainNode = findOutputNode(ioSubNodes);
+        replaceNodeContent(objects, viewList, outputsMainNode);
+        ioSubNodes.add(ioSubNodes.size() - 1, outputsMainNode);
+
+
+        ioMainNode.setNodeList(ioSubNodes);
+        targetSubNodes.add(targetSubNodes.size() - 1, ioMainNode);
+        targetMainNode.setNodeList(targetSubNodes);
+        target.setNode(targetMainNode);
+        targetBase.setTarget(target);
+        augmentation.setTargetBase(targetBase);
+    }
+
+    public void deleteAllOutputObjects() {
+        Node outputsMainNode = findOutputNode(ioSubNodes);
+        outputsMainNode.getNodeList().clear();
+    }
+
+    private void replaceNodeContent(List<Node> objects, List<String> viewList, Node outputsMainNode) {
+        List<Node> newOutputObjects;
+        if (outputsMainNode.getNodeList() != null) {
+            newOutputObjects = Stream.concat(outputsMainNode.getNodeList().stream(), objects.stream()).toList();
+        } else {
+            newOutputObjects = objects;
+        }
+
+        targetSubNodes.remove(ioMainNode);
+        ioSubNodes.remove(outputsMainNode);
+
+        outputsMainNode.setNodeList(newOutputObjects);
+        outputsMainNode.setView(viewList.toString()
+                .replace("[", "")
+                .replace("]", ""));
     }
 
     // checks for first non-zero indexed node with empty "view", "collapse" and "show" - it is important
@@ -83,4 +103,13 @@ public class AugmentationManager {
         return null;
     }
 
+    // checks for node with "view" containing _outputs
+    private Node findOutputNode(List<Node> ioSubNodes) {
+        for (Node node : ioSubNodes) {
+            if (node.getView().contains("_outputs") && !node.getView().contains("_IO")) {
+                return node;
+            }
+        }
+        return null;
+    }
 }

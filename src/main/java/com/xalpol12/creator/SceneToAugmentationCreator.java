@@ -14,30 +14,57 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SceneToAugmentationCreator {
+    private static List<Node> inputObjects;
+    private static List<Node> outputObjects;
+    private static Augmentation aug;
+    private static AugmentationManager augManager;
 
     public static Augmentation createAugmentation(String jsonFilePath, String xmlFilePath) throws IOException, JAXBException {
+        initVariables(xmlFilePath);
+
         Scene scene = readJSON(jsonFilePath);
-        List<JSONObject> jsonObjects = scene.objects();                            // Unwrap JSON scene object
+        List<JSONObject> jsonObjects = scene.objects();
 
-        List<Node> inputObjects = createIOObjects(jsonObjects);
+        createIOObjects(jsonObjects);
 
-        Augmentation aug = JAXBParser.unmarshall(xmlFilePath, Augmentation.class); // Create augmentation based on Joining_01.xml file
-        AugmentationManager augManager = new AugmentationManager(aug);
+        deleteAllPreviousObjects();
+        insertAllObjects(scene.viewList());
 
-        augManager.deleteAllInputObjects();                                     // Delete all currently added objects
-        augManager.insertInputObjects(aug, inputObjects, scene.viewList());     // Insert user objects
         return aug;
+    }
+
+    private static void initVariables(String xmlFilePath) throws JAXBException {
+         inputObjects = new ArrayList<>();
+         outputObjects = new ArrayList<>();
+         aug = JAXBParser.unmarshall(xmlFilePath, Augmentation.class);
+         augManager = new AugmentationManager(aug);
     }
 
     private static Scene readJSON(String filepath) throws IOException {
         return JSONParser.parse(filepath);
     }
 
-    private static List<Node> createIOObjects(List<JSONObject> jsonObjects) {
-        List<Node> inputObjects = new ArrayList<>();
+    private static void createIOObjects(List<JSONObject> jsonObjects) {
         for (JSONObject object : jsonObjects) {
-            inputObjects.add(IOObjectCreator.create(object));
+            Node node = IOObjectCreator.create(object);
+            switch (object.type()) {
+                case "joining_input" -> inputObjects.add(node);
+                case "joining_output" -> outputObjects.add(node);
+            }
         }
-        return inputObjects;
+    }
+
+    private static void deleteAllPreviousObjects() {
+        augManager.deleteAllInputObjects();
+        augManager.deleteAllOutputObjects();
+    }
+
+    private static void insertAllObjects(List<String> viewList) {
+        if (!inputObjects.isEmpty()) {
+            augManager.insertInputObjects(aug, inputObjects, viewList);
+        }
+        if (!outputObjects.isEmpty()) {
+            augManager.insertOutputObjects(aug, outputObjects, viewList);
+        }
     }
 }
