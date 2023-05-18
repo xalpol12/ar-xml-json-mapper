@@ -26,6 +26,8 @@ class ARNodeDirectorTest {
 
         String view = "joining_g1bg1Details_i";
         String labelMenuName = "G1BG1";
+        String url = "http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/" +
+                "Sensor196959/Documentation/DataSheet.pdf";
 
         //when
         //menuName
@@ -35,7 +37,7 @@ class ARNodeDirectorTest {
         Node createdMenuName = builderText.getComponent();
 
         //datasheet
-        ARLink2DBuilder builderLink = new ARLink2DBuilder(view);
+        ARLink2DBuilder builderLink = new ARLink2DBuilder(view, url);
         ARLink2DDirector directorLink = new ARLink2DDirector();
         directorLink.constructDatasheet(builderLink);
         Node createdDatasheet = builderLink.getComponent();

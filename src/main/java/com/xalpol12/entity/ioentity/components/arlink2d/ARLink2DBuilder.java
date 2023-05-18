@@ -23,8 +23,9 @@ public class ARLink2DBuilder implements IOComponentBuilder {
     private final Node subNode;
     private final Node mainNode;
 
-    public ARLink2DBuilder(String view) {
+    public ARLink2DBuilder(String view, String refer) {
         this.view = view;
+        this.refer = refer;
 
         link = new Link();
         model = new Model();
@@ -58,10 +59,6 @@ public class ARLink2DBuilder implements IOComponentBuilder {
 
     public void setTexture(String texture) {
         this.texture = texture;
-    }
-
-    public void setRefer(String refer) {
-        this.refer = refer;
     }
 
     public void setW(int w) {

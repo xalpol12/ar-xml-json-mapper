@@ -21,9 +21,12 @@ class ARLink2DDirectorTest {
 
         String view = "joining_g1bg1Details_i";
 
+        String url = "http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/" +
+                "Sensor196959/Documentation/DataSheet.pdf";
+
 
         //when
-        ARLink2DBuilder builder = new ARLink2DBuilder(view);
+        ARLink2DBuilder builder = new ARLink2DBuilder(view, url);
         ARLink2DDirector director = new ARLink2DDirector();
         director.constructDatasheet(builder);
         Node createdDatasheet = builder.getComponent();

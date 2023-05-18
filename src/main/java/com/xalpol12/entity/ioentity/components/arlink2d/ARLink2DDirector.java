@@ -9,8 +9,6 @@ public class ARLink2DDirector {
         builder.setSz(30f);
         builder.setFile("planexy");
         builder.setTexture("images/docu_rounded_colored.png");
-        builder.setRefer("http://mes-pc.festo.systems:8000/InfoPortal/MPS/Components/" +
-                "Sensor196959/Documentation/DataSheet.pdf");
         builder.setW(0);
         builder.setH(0);
         builder.setD(1);
