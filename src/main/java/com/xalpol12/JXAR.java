@@ -34,6 +34,7 @@ public class JXAR {
                 JAXBParser.marshall(aug, saveLocation + File.separator + title);
                 QRCodeGenerator.writeQRCodeImage(title, saveLocation);
             }
+            System.out.printf("%x files converted successfully.", args.length - 1);
         }
     }
 
