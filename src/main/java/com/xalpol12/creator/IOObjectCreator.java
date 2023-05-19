@@ -7,9 +7,9 @@ import com.xalpol12.entity.xmlentity.Node;
 
 public class IOObjectCreator {
     public static Node create(JSONObject object) {
-        IOObjectBuilder builder = new IOObjectBuilder(object.position(),
-                object.rotation(), object.scale(),
-                object.label(), object.url(), object.views());
+        IOObjectBuilder builder = new IOObjectBuilder(object.getPosition(),
+                object.getRotation(), object.getScale(),
+                object.getLabel(), object.getUrl(), object.getViews());
         IOObjectDirector director = new IOObjectDirector();
         director.constructIOObject(builder);
         return builder.getObject();

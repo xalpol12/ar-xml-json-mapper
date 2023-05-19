@@ -7,6 +7,7 @@ import com.xalpol12.entity.xmlentity.TargetBase;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class AugmentationManager {
@@ -67,7 +68,7 @@ public class AugmentationManager {
     private void replaceNodeContent(List<Node> objects, List<String> viewList, Node outputsMainNode) {
         List<Node> newOutputObjects;
         if (outputsMainNode.getNodeList() != null) {
-            newOutputObjects = Stream.concat(outputsMainNode.getNodeList().stream(), objects.stream()).toList();
+            newOutputObjects = Stream.concat(outputsMainNode.getNodeList().stream(), objects.stream()).collect(Collectors.toList());
         } else {
             newOutputObjects = objects;
         }

@@ -23,12 +23,12 @@ public class SceneToAugmentationCreator {
         initVariables(xmlFilePath);
 
         Scene scene = readJSON(jsonFilePath);
-        List<JSONObject> jsonObjects = scene.objects();
+        List<JSONObject> jsonObjects = scene.getObjects();
 
         createIOObjects(jsonObjects);
 
         deleteAllPreviousObjects();
-        insertAllObjects(scene.viewList());
+        insertAllObjects(scene.getViewList());
 
         return aug;
     }
@@ -47,9 +47,13 @@ public class SceneToAugmentationCreator {
     private static void createIOObjects(List<JSONObject> jsonObjects) {
         for (JSONObject object : jsonObjects) {
             Node node = IOObjectCreator.create(object);
-            switch (object.type()) {
-                case "joining_input" -> inputObjects.add(node);
-                case "joining_output" -> outputObjects.add(node);
+            switch (object.getType()) {
+                case "joining_input":
+                    inputObjects.add(node);
+                    break;
+                case "joining_output":
+                    outputObjects.add(node);
+                    break;
             }
         }
     }

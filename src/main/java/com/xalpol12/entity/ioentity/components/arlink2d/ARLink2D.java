@@ -6,6 +6,8 @@ import com.xalpol12.entity.xmlentity.Model;
 import com.xalpol12.entity.xmlentity.Node;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ARLink2D extends IOComponent {
     private Node subNode;
@@ -19,6 +21,6 @@ public class ARLink2D extends IOComponent {
         this.link = link;
         model.setLink(link);
         subNode.setModel(model);
-        mainNode.setNodeList(List.of(subNode));
+        mainNode.setNodeList(Stream.of(subNode).collect(Collectors.toList()));  //java 8 does not support List.of() :/
     }
 }

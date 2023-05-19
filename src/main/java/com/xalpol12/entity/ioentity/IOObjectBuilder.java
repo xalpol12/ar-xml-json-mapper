@@ -17,6 +17,8 @@ import com.xalpol12.entity.jsonentity.Vector3;
 import com.xalpol12.entity.xmlentity.Node;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class IOObjectBuilder {
     private final Float tx;
@@ -45,17 +47,17 @@ public class IOObjectBuilder {
     private Node mainNode;
 
     public IOObjectBuilder(Vector3 position, Vector3 rotation, Vector3 scale, String label, String url, List<String> view) {
-        this.tx = position.x();
-        this.ty = position.y();
-        this.tz = position.z();
+        this.tx = position.getX();
+        this.ty = position.getY();
+        this.tz = position.getZ();
 
-        this.rx = rotation.x();
-        this.ry = rotation.y();
-        this.rz = rotation.z();
+        this.rx = rotation.getX();
+        this.ry = rotation.getY();
+        this.rz = rotation.getZ();
 
-        this.sx = scale.x();
-        this.sy = scale.y();
-        this.sz = scale.z();
+        this.sx = scale.getX();
+        this.sy = scale.getY();
+        this.sz = scale.getZ();
 
         this.url = url;
 
@@ -162,7 +164,8 @@ public class IOObjectBuilder {
     }
 
     public Node getObject() {
-        return new ARNode(mainNode, List.of(openDetails, arText,
-                staticImage, details, activeLink, wireframe)).getMainNode();
+        return new ARNode(mainNode, Stream.of(openDetails, arText,
+                staticImage, details, activeLink, wireframe)
+                .collect(Collectors.toList())).getMainNode();
     }
 }

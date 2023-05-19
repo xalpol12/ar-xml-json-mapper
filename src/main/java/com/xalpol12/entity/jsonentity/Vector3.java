@@ -1,4 +1,10 @@
 package com.xalpol12.entity.jsonentity;
 
-public record Vector3(float x, float y, float z) {
+import lombok.Data;
+
+@Data
+public class Vector3 {
+    private float x;
+    private float y;
+    private float z;
 }

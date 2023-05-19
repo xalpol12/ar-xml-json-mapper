@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import javax.xml.bind.JAXBException;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -80,7 +82,7 @@ class JAXBParserTest {
         KeyFrame frame1 = new KeyFrame(0, 1, "linear");
         KeyFrame frame2 = new KeyFrame(1, 1.5, "linear");
         KeyFrame frame3 = new KeyFrame(2, 1, "linear");
-        List<KeyFrame> frames = List.of(frame1, frame2, frame3);
+        List<KeyFrame> frames = Stream.of(frame1, frame2, frame3).collect(Collectors.toList());
 
         Animation animation = new Animation();
         animation.setKeyFrameList(frames);
