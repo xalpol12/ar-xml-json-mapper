@@ -10,6 +10,7 @@ import com.xalpol12.parser.JSONParser;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class SceneToAugmentationCreator {
     private static Augmentation aug;
     private static AugmentationManager augManager;
 
-    public static Augmentation createAugmentation(String jsonFilePath, String xmlFilePath) throws IOException, JAXBException {
+    public static Augmentation createAugmentation(String jsonFilePath, String xmlFilePath) throws IOException, JAXBException, URISyntaxException {
         initVariables(xmlFilePath);
 
         Scene scene = readJSON(jsonFilePath);
@@ -33,10 +34,10 @@ public class SceneToAugmentationCreator {
         return aug;
     }
 
-    private static void initVariables(String xmlFilePath) throws JAXBException {
+    private static void initVariables(String xmlFilePath) throws JAXBException, URISyntaxException {
          inputObjects = new ArrayList<>();
          outputObjects = new ArrayList<>();
-         aug = JAXBParser.unmarshall(xmlFilePath, Augmentation.class);
+         aug = JAXBParser.unmarshallFromRelativePath(xmlFilePath, Augmentation.class);
          augManager = new AugmentationManager(aug);
     }
 

@@ -12,11 +12,18 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.net.URISyntaxException;
 
 public class JAXBParser {
 
     public static <T> T unmarshall(String fileName, Class<T> type) throws JAXBException {
         File file = FileHandler.getFile(fileName);
+        JAXBContext context = JAXBContext.newInstance(type);
+        return (T) context.createUnmarshaller().unmarshal(file);
+    }
+
+    public static <T> T unmarshallFromRelativePath(String fileName, Class<T> type) throws JAXBException, URISyntaxException {
+        File file = FileHandler.getRelativePathFile(fileName);
         JAXBContext context = JAXBContext.newInstance(type);
         return (T) context.createUnmarshaller().unmarshal(file);
     }
