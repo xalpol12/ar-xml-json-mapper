@@ -9,8 +9,7 @@ public class FileHandler {
         return new File(fileName);
     }
 
-    public static File getRelativePathFile(String fileName) throws URISyntaxException {
-        URL url = FileHandler.class.getClassLoader().getResource(fileName);
-        return new File(url.toURI());
+    public static InputStream getRelativePathFile(String fileName) throws URISyntaxException, IOException {
+        return FileHandler.class.getClassLoader().getResourceAsStream(fileName);
     }
 }

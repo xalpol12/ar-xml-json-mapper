@@ -34,7 +34,7 @@ public class SceneToAugmentationCreator {
         return aug;
     }
 
-    private static void initVariables(String xmlFilePath) throws JAXBException, URISyntaxException {
+    private static void initVariables(String xmlFilePath) throws JAXBException, URISyntaxException, IOException {
          inputObjects = new ArrayList<>();
          outputObjects = new ArrayList<>();
          aug = JAXBParser.unmarshallFromRelativePath(xmlFilePath, Augmentation.class);
