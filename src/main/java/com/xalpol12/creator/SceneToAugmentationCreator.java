@@ -49,10 +49,10 @@ public class SceneToAugmentationCreator {
         for (JSONObject object : jsonObjects) {
             Node node = IOObjectCreator.create(object);
             switch (object.getType()) {
-                case "joining_input":
+                case "joining_inputs":
                     inputObjects.add(node);
                     break;
-                case "joining_output":
+                case "joining_outputs":
                     outputObjects.add(node);
                     break;
             }
@@ -66,10 +66,14 @@ public class SceneToAugmentationCreator {
 
     private static void insertAllObjects(List<String> viewList) {
         if (!inputObjects.isEmpty()) {
-            augManager.insertInputObjects(aug, inputObjects, viewList);
+            List<String> viewListCopy = new ArrayList<>(viewList);
+            viewListCopy.remove("joining_outputs");
+            augManager.insertInputObjects(aug, inputObjects, viewListCopy);
         }
         if (!outputObjects.isEmpty()) {
-            augManager.insertOutputObjects(aug, outputObjects, viewList);
+            List<String> viewListCopy = new ArrayList<>(viewList);
+            viewListCopy.remove("joining_inputs");
+            augManager.insertOutputObjects(aug, outputObjects, viewListCopy);
         }
     }
 }
