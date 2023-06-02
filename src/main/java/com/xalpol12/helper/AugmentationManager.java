@@ -95,7 +95,6 @@ public class AugmentationManager {
         return null;
     }
 
-    // checks for node with "view" containing _inputs
     private Node findInputNode(List<Node> ioSubNodes) {
         for (Node node : ioSubNodes) {
             if (node.getView().contains("_inputs") && !node.getView().contains("_IO"))
@@ -104,7 +103,6 @@ public class AugmentationManager {
         return null;
     }
 
-    // checks for node with "view" containing _outputs
     private Node findOutputNode(List<Node> ioSubNodes) {
         for (Node node : ioSubNodes) {
             if (node.getView().contains("_outputs") && !node.getView().contains("_IO")) {

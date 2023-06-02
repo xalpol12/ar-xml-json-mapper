@@ -15,7 +15,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
-public class JXAR {
+public class ArObjectMapper {
     /*  Serves as an adapter between generated json files
     *   and required by Festo Didactic AR App xml station files.
     *   Generates xml file and qr code for every supplied json file.
